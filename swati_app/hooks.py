@@ -129,21 +129,23 @@ app_license = "mit"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+    "Payroll Entry": "swati_app.custom_script.payroll_entry.payroll_entry.CustomPayrollEntry",
+}
+
 
 # Document Events
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Salary Structure Assignment": {
+		"on_submit": "swati_app.custom_script.salary_structure_assignment.salary_structure_assignment.on_submit",
+        "on_cancel": "swati_app.custom_script.salary_structure_assignment.salary_structure_assignment.on_cancel"
+
+	
+	}
+}
 
 # Scheduled Tasks
 # ---------------

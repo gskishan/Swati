@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-03-12 19:41:45.741132",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "salary_structure",
+  "project",
+  "base"
+ ],
+ "fields": [
+  {
+   "fieldname": "salary_structure",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Salary Structure",
+   "options": "Salary Structure",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "base",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Base",
+   "non_negative": 1,
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-12 19:59:55.256325",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "Salary Structure Assigment",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
