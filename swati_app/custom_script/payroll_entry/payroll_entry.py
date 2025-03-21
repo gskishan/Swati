@@ -82,6 +82,7 @@ def set_salary_structure_assignment(args, employee):
 
 def create_salary_slips_for_employees(employees, args, publish_progress=True):
 	payroll_entry = frappe.get_cached_doc("Payroll Entry", args.payroll_entry)
+	delete_if_proj_salary_slip(args.payroll_entry)
 	count = 0
 	for emp in employees:
 		args.update({"employee": emp})
@@ -111,6 +112,20 @@ def create_salary_slips_for_employees(employees, args, publish_progress=True):
 	create_consolidated_salary_slips(employees, args)
 	frappe.publish_realtime("completed_salary_slip_creation", user=frappe.session.user)
 	
+def delete_if_proj_salary_slip(payroll):
+    sql = """SELECT name FROM `tabSalary Slip Project Wise` WHERE payroll_entry="{0}" """.format(payroll)
+    data = frappe.db.sql(sql, as_dict=True)
+
+    for d in data:
+        doc = frappe.get_doc("Salary Slip Project Wise", d.name)
+        
+        # Cancel first if it's submitted
+        if doc.docstatus == 1:
+            doc.cancel()
+
+        # Delete the document
+        doc.delete()
+
 
 def create_consolidated_salary_slips(employees, args, publish_progress=True):
 	payroll_entry = frappe.get_cached_doc("Payroll Entry", args.payroll_entry)
