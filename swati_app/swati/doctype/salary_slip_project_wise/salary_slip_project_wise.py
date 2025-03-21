@@ -519,13 +519,7 @@ class SalarySlipProjectWise(TransactionBase):
 		self.total_working_days = total_days
 		self.payment_days = max(total_days - (lwp or 0), 0)
 
-		# Debugging log
-		frappe.log_error(
-			f"Employee: {self.employee}, Project: {self.project}\n"
-			f"Attendance Days: {attendance_days}, Holidays: {holiday_days}\n"
-			f"Total Working Days: {total_days}, Payment Days: {self.payment_days}",
-			"Payroll Calculation Debug"
-		)
+		
 
 
 

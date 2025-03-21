@@ -30,7 +30,7 @@ class CustomSalarySlip(SalarySlip):
 
         self.set_salary_structure_assignment()
         self.calculate_net_pay()
-        self.add_calculate_ot()
+        self.calculate_ot()
         self.calculate_net_pay()
         self.compute_year_to_date()
         self.compute_month_to_date()
@@ -51,37 +51,40 @@ class CustomSalarySlip(SalarySlip):
                 )
 
 
-def calculate_ot(self):
-    ot, component = calculate_overtime(self.employee, self.start_date, self.end_date)
-    
-    # Ensure overtime exists
-    if ot <= 0:
-        return
+    def calculate_ot(self):
+        ot, component = calculate_overtime(self.employee, self.start_date, self.end_date)
+        
+        # Ensure overtime exists
+        if ot <= 0:
+            return
 
-    # Calculate base net pay excluding overtime
-    net_pay = self.net_pay
-    existing_ot_entry = None
+        # Calculate base net pay excluding overtime
+        net_pay = self.net_pay
+        existing_ot_entry = None
 
-    for d in self.earnings:
-        if d.salary_component == component:
-            existing_ot_entry = d
-            break  # Stop loop once we find the OT component
+        for d in self.earnings:
+            if d.salary_component == component:
+                existing_ot_entry = d
+                break  # Stop loop once we find the OT component
 
-    # If OT component already exists, do nothing
-    if existing_ot_entry:
-        return
+        # If OT component already exists, do nothing
+        if existing_ot_entry:
+            return
 
-    # Calculate OT amount
-    OT_Amount = (net_pay / self.payment_days) * ot
+        # Calculate OT amount
+        OT_Amount = (net_pay / self.payment_days) * ot
 
-    # Append OT component only if it doesn't exist
-    ot_component = self.append("earnings", {})
-    ot_component.salary_component = component
-    ot_component.amount = OT_Amount
-
-
+        # Append OT component only if it doesn't exist
+        ot_component = self.append("earnings", {})
+        ot_component.salary_component = component
+        ot_component.amount = OT_Amount
 
 
+
+
+
+
+from datetime import datetime, timedelta
 
 def calculate_overtime(employee, start_date, end_date):
     """
@@ -90,15 +93,21 @@ def calculate_overtime(employee, start_date, end_date):
 
     # Fetch OT rules from Payroll Settings
     payroll_settings = frappe.get_single("Payroll Settings")
-    half_ot_hours_range = payroll_settings.half_ot_hours.split("-")  # Example: "11-12"
-    full_ot_hours_range = payroll_settings.full_ot_hours.split("-")  # Example: "15-16"
 
-    half_ot_min, half_ot_max = int(half_ot_hours_range[0]), int(half_ot_hours_range[1])
-    full_ot_min, full_ot_max = int(full_ot_hours_range[0]), int(full_ot_hours_range[1])
+    # Standardizing dash characters and splitting
+    half_ot_hours_range = payroll_settings.custom_half_ot_hours.replace("–", "-").split("-")
+    full_ot_hours_range = payroll_settings.custom_full_ot_hours.replace("–", "-").split("-")
 
-    # Fetch attendance records (From and Till times in 24-hour format)
+    # Convert to integers safely
+    try:
+        half_ot_min, half_ot_max = int(half_ot_hours_range[0]), int(half_ot_hours_range[1])
+        full_ot_min, full_ot_max = int(full_ot_hours_range[0]), int(full_ot_hours_range[1])
+    except ValueError:
+        frappe.throw("Invalid OT hours format in Payroll Settings. Please use a valid format like '11-12'.")
+
+    # Fetch attendance records
     attendance_records = frappe.db.sql("""
-        SELECT custom_from from,custom_till till
+        SELECT custom_from as from_time, custom_till as till_time
         FROM `tabAttendance`
         WHERE employee = %s 
         AND attendance_date BETWEEN %s AND %s
@@ -108,11 +117,26 @@ def calculate_overtime(employee, start_date, end_date):
 
     # Calculate OT based on working hours
     for record in attendance_records:
-        from_time = datetime.strptime(record["from"], "%H:%M:%S")  # 24-hour format
-        till_time = datetime.strptime(record["till"], "%H:%M:%S")  # 24-hour format
+        from_time = record["from_time"]
+        till_time = record["till_time"]
 
-        # Calculate total working hours
-        hours_worked = (till_time - from_time).total_seconds() / 3600  # Convert seconds to hours
+        # ✅ Convert `timedelta` to hours and minutes
+        if isinstance(from_time, timedelta) and isinstance(till_time, timedelta):
+            from_time = (datetime.min + from_time).time()  # Convert timedelta to time
+            till_time = (datetime.min + till_time).time()
+        else:
+            try:
+                from_time = datetime.strptime(from_time, "%H:%M:%S").time()
+                till_time = datetime.strptime(till_time, "%H:%M:%S").time()
+            except ValueError:
+                frappe.throw(f"Invalid time format in Attendance for {from_time} - {till_time}")
+
+        # ✅ Convert `time` objects to float hours
+        from_hours = from_time.hour + from_time.minute / 60
+        till_hours = till_time.hour + till_time.minute / 60
+
+        # ✅ Calculate total working hours
+        hours_worked = till_hours - from_hours
 
         # Apply OT rules
         if half_ot_min <= hours_worked <= half_ot_max:
@@ -120,6 +144,4 @@ def calculate_overtime(employee, start_date, end_date):
         elif full_ot_min <= hours_worked <= full_ot_max:
             total_ot += 1
 
-
-    return total_ot,payroll_settings.custom_ot_component
-
+    return total_ot, payroll_settings.custom_ot_component
