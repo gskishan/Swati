@@ -134,7 +134,10 @@ doctype_js = {
 
 override_doctype_class = {
     "Payroll Entry": "swati_app.custom_script.payroll_entry.payroll_entry.CustomPayrollEntry",
+        "Salary Slip": "swati_app.custom_script.salary_slip.salary_slip.CustomSalarySlip",
+
 }
+
 
 
 # Document Events
