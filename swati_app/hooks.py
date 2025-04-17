@@ -43,10 +43,10 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-doctype_js = {
-    "Opportunity" : "swati/custom_code/opportunity/opportunity.js",
-    "Material Request" : "swati/custom_code/material_request/material_request.js"
-    }
+# doctype_js = {
+#     "Opportunity" : "swati/custom_code/opportunity/opportunity.js",
+#     "Material Request" : "swati/custom_code/material_request/material_request.js"
+#     }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -152,7 +152,7 @@ doc_events = {
 	
 	}
 }
-
+fixtures = ["Client Script"]
 # Scheduled Tasks
 # ---------------
 
