@@ -59,10 +59,10 @@
   "doctype": "Client Script",
   "dt": "Purchase Order",
   "enabled": 1,
-  "modified": "2025-04-17 19:08:23.416299",
+  "modified": "2025-04-17 19:27:24.465860",
   "module": "Swati",
   "name": "Purchase order",
-  "script": "frappe.ui.form.on('Purchase Order', {\n\trefresh(frm) {\n\t\tif(frappe.session.user === 'Administrator') return;\n\t\tif(frappe.user_roles.includes('Restrict Update Items')){\n\t\tsetTimeout(() => {\n            frm.remove_custom_button('Update Items');\n        }, 10);\n\t\t}\n\t}\n})",
+  "script": "frappe.ui.form.on('Purchase Order', {\n\trefresh(frm) {\n\tsetTimeout(() => {\n            frm.remove_custom_button('Update Items');\n        }, 10);\n\t}\n})",
   "view": "Form"
  }
 ]
