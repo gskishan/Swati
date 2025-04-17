@@ -31,5 +31,38 @@
   "name": "Leave Application",
   "script": "frappe.ui.form.on('Leave Application', {\n\ttotal_leave_days: function(frm) {\n\t\tif (frm.doc.leave_type == \"Sick Leave\" && frm.doc.total_leave_days > 3) {\n\t\t\tfrm.set_df_property(\"custom_upload_attach\", \"reqd\", 1);\n\t\t} else {\n\t\t\tfrm.set_df_property(\"custom_upload_attach\", \"reqd\", 0);\n\t\t}\n\t},\n\tbefore_save: function(frm) {\n\t    if (frm.doc.leave_type == \"Sick Leave\" && frm.doc.total_leave_days > 3) {\n\t\t\tfrm.set_df_property(\"custom_upload_attach\", \"reqd\", 1);\n\t\t} else {\n\t\t\tfrm.set_df_property(\"custom_upload_attach\", \"reqd\", 0);\n\t\t}\n\t}\n});\n",
   "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Sales Order",
+  "enabled": 1,
+  "modified": "2025-04-17 15:05:18.709052",
+  "module": "Swati",
+  "name": "Sales Order",
+  "script": "frappe.ui.form.on('Sales Order', {\n\trefresh(frm) {\n\t\tif(frappe.session.user === 'Administrator') return;\n\t\tif(frappe.user_roles.includes('Restrict Update Items')){\n\t\tsetTimeout(() => {\n            frm.remove_custom_button('Update Items');\n        }, 10);\n\t\t}\n\t}\n})",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Request for Quotation",
+  "enabled": 1,
+  "modified": "2025-04-17 18:48:53.375308",
+  "module": "Swati",
+  "name": "Request for Quotation",
+  "script": "\nfrappe.ui.form.on(\"Request for Quotation\", \"custom_shipping_address\", function(frm, cdt, cdn) { \n    if(frm.doc.custom_shipping_address){ \n        return frm.call({ \n            method: \"frappe.contacts.doctype.address.address.get_address_display\", \n            args: { \n                \"address_dict\": frm.doc.custom_shipping_address\n                \n            }, \n            callback: function(r) { \n                if(r.message) \n                frm.set_value(\"custom_shipping_address_details\", r.message); \n                \n            } \n            \n        }); \n        \n    } \n    else{ \n        frm.set_value(\"custom_shipping_address_details\", \"\"); \n        \n    }\n    \n});\nfrappe.ui.form.on(\"Request for Quotation\", \"onload\", function(frm){\n frm.set_query(\"custom_shipping_address\", function(){\n return {\n \"filters\": [\n [\"Address\", \"link_doctype\", \"=\", \"Company\"],\n [\"Address\", \"link_name\", \"=\", frm.doc.company]\n ]\n }\n });\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Purchase Order",
+  "enabled": 1,
+  "modified": "2025-04-17 19:08:23.416299",
+  "module": "Swati",
+  "name": "Purchase order",
+  "script": "frappe.ui.form.on('Purchase Order', {\n\trefresh(frm) {\n\t\tif(frappe.session.user === 'Administrator') return;\n\t\tif(frappe.user_roles.includes('Restrict Update Items')){\n\t\tsetTimeout(() => {\n            frm.remove_custom_button('Update Items');\n        }, 10);\n\t\t}\n\t}\n})",
+  "view": "Form"
  }
 ]
