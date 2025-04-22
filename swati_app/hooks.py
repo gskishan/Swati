@@ -150,19 +150,24 @@ doc_events = {
         "on_cancel": "swati_app.custom_script.salary_structure_assignment.salary_structure_assignment.on_cancel"
 
 	
+	},
+    "Purchase Order": {
+		"validate": "swati_app.custom_script.purchase_order.purchase_order.validate",
+
+	
 	}
 }
 fixtures = ["Client Script"]
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
 # 	"all": [
 # 		"swati_app.tasks.all"
 # 	],
-# 	"daily": [
-# 		"swati_app.tasks.daily"
-# 	],
+	"daily": [
+		"swati_app.custom_script.project.project.move_expired_users"
+	],
 # 	"hourly": [
 # 		"swati_app.tasks.hourly"
 # 	],
@@ -172,7 +177,7 @@ fixtures = ["Client Script"]
 # 	"monthly": [
 # 		"swati_app.tasks.monthly"
 # 	],
-# }
+}
 
 # Testing
 # -------
