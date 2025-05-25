@@ -32,3 +32,12 @@ def move_expired_users():
             if updated_users:
                 doc.save(ignore_permissions=True)
                 frappe.db.commit()
+
+def update_expected_date(doc, method):
+    if doc.sales_order:
+        frappe.db.set_value("Sales Order", {"name":doc.sales_order}, "custom_expected_start_date", doc.expected_start_date)
+        frappe.db.set_value("Sales Order", {"name":doc.sales_order}, "custom_expected_end_date", doc.expected_end_date)
+        frappe.db.commit()
+
+
+

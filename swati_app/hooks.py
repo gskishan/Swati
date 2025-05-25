@@ -46,7 +46,8 @@ app_license = "mit"
 # doctype_js = {
 #     "Opportunity" : "swati/custom_code/opportunity/opportunity.js",
 #     "Material Request" : "swati/custom_code/material_request/material_request.js"
-#     }
+	# "Payment Entry" : "swati/custom_code/payment_entry/payment_entry.js",
+    # }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -153,6 +154,16 @@ doc_events = {
 	},
     "Purchase Order": {
 		"validate": "swati_app.custom_script.purchase_order.purchase_order.validate",
+
+	
+	},
+    "Quotation": {
+		"validate": "swati_app.custom_script.quotation.quotation.validate",
+
+	
+	},
+    "Project": {
+		"before_save": "swati_app.custom_script.project.project.update_expected_date",
 
 	
 	}
