@@ -1,0 +1,329 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-17 18:21:35.731524",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_o33t",
+  "amended_from",
+  "email",
+  "name_as_per_aadhar_card",
+  "blood_group",
+  "date_of_birth",
+  "employee_mobile_number",
+  "pvc_police_verification_certificatenumber",
+  "passport_number",
+  "aadhar_card_number",
+  "pan_card_number",
+  "column_break_alzo",
+  "father_name",
+  "mother_name",
+  "nominee_name",
+  "nominee_dob",
+  "nominee_relation",
+  "job_location",
+  "nominee_mobile_number",
+  "qualification_with_specialization",
+  "emergency_number",
+  "address_section",
+  "present_address",
+  "column_break_oalo",
+  "perment_address_as_per_aadhar",
+  "section_break_zxcc",
+  "bank_account_number",
+  "ifsc_code",
+  "shirt_size",
+  "shoes_size",
+  "esic_number_previous_company",
+  "column_break_sikd",
+  "bank_name",
+  "total_experience",
+  "pant_size",
+  "uan_number_previous_company",
+  "section_break_dmfd",
+  "passport_size_photo",
+  "aadhar_card_photo_front__back",
+  "qualification_with_speclization_photo",
+  "previous_company_payslips_3_months",
+  "upload_updated_resume_only",
+  "column_break_cyqp",
+  "pan_card_photo_front_only",
+  "bank_passbook_or_cheque",
+  "pvc_police_verification_certificate_or_passport",
+  "previous_company_experiencerelieving_letter"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_o33t",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Candidate Registeration Form",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "name_as_per_aadhar_card",
+   "fieldtype": "Data",
+   "label": "Name as per Aadhar card",
+   "reqd": 1
+  },
+  {
+   "fieldname": "blood_group",
+   "fieldtype": "Data",
+   "label": "Blood Group",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date Of Birth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_alzo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "father_name",
+   "fieldtype": "Data",
+   "label": "Father Name"
+  },
+  {
+   "fieldname": "mother_name",
+   "fieldtype": "Data",
+   "label": "Mother Name"
+  },
+  {
+   "fieldname": "nominee_name",
+   "fieldtype": "Data",
+   "label": "Nominee Name"
+  },
+  {
+   "fieldname": "nominee_dob",
+   "fieldtype": "Date",
+   "label": "Nominee DOB"
+  },
+  {
+   "fieldname": "nominee_relation",
+   "fieldtype": "Data",
+   "label": "Nominee Relation"
+  },
+  {
+   "fieldname": "employee_mobile_number",
+   "fieldtype": "Data",
+   "label": "Employee Mobile Number"
+  },
+  {
+   "fieldname": "job_location",
+   "fieldtype": "Link",
+   "label": "Job location ",
+   "options": "Company"
+  },
+  {
+   "fieldname": "nominee_mobile_number",
+   "fieldtype": "Data",
+   "label": "Nominee Mobile Number"
+  },
+  {
+   "fieldname": "qualification_with_specialization",
+   "fieldtype": "Data",
+   "label": "Qualification with specialization"
+  },
+  {
+   "fieldname": "emergency_number",
+   "fieldtype": "Data",
+   "label": "Emergency Number"
+  },
+  {
+   "fieldname": "address_section",
+   "fieldtype": "Section Break",
+   "label": "Address"
+  },
+  {
+   "fieldname": "present_address",
+   "fieldtype": "Text",
+   "label": "Present Address"
+  },
+  {
+   "fieldname": "perment_address_as_per_aadhar",
+   "fieldtype": "Text",
+   "label": "Perment Address (As Per Aadhar)"
+  },
+  {
+   "fieldname": "column_break_oalo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pvc_police_verification_certificatenumber",
+   "fieldtype": "Data",
+   "label": "PVC (Police Verification Certificate)NUMBER"
+  },
+  {
+   "fieldname": "passport_number",
+   "fieldtype": "Data",
+   "label": "Passport Number"
+  },
+  {
+   "fieldname": "aadhar_card_number",
+   "fieldtype": "Data",
+   "label": "Aadhar card number"
+  },
+  {
+   "fieldname": "pan_card_number",
+   "fieldtype": "Data",
+   "label": "Pan Card Number"
+  },
+  {
+   "fieldname": "section_break_zxcc",
+   "fieldtype": "Section Break",
+   "label": "Bank Details"
+  },
+  {
+   "fieldname": "bank_account_number",
+   "fieldtype": "Data",
+   "label": "Bank Account Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ifsc_code",
+   "fieldtype": "Data",
+   "label": "IFSC Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_sikd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_experience",
+   "fieldtype": "Data",
+   "label": "Total Experience"
+  },
+  {
+   "fieldname": "shirt_size",
+   "fieldtype": "Data",
+   "label": "Shirt Size"
+  },
+  {
+   "fieldname": "pant_size",
+   "fieldtype": "Data",
+   "label": "Pant Size"
+  },
+  {
+   "fieldname": "shoes_size",
+   "fieldtype": "Data",
+   "label": "Shoes Size"
+  },
+  {
+   "fieldname": "esic_number_previous_company",
+   "fieldtype": "Data",
+   "label": "ESIC Number (Previous Company)"
+  },
+  {
+   "fieldname": "uan_number_previous_company",
+   "fieldtype": "Data",
+   "label": "UAN Number (Previous Company)"
+  },
+  {
+   "fieldname": "section_break_dmfd",
+   "fieldtype": "Section Break",
+   "label": "Upload Options"
+  },
+  {
+   "fieldname": "passport_size_photo",
+   "fieldtype": "Attach Image",
+   "label": "Passport Size Photo"
+  },
+  {
+   "fieldname": "aadhar_card_photo_front__back",
+   "fieldtype": "Attach Image",
+   "label": "Aadhar Card Photo Front_ Back"
+  },
+  {
+   "fieldname": "qualification_with_speclization_photo",
+   "fieldtype": "Attach Image",
+   "label": "QUALIFICATION WITH SPECLIZATION PHOTO"
+  },
+  {
+   "fieldname": "previous_company_payslips_3_months",
+   "fieldtype": "Attach",
+   "label": "Previous Company Payslips (3 Months)"
+  },
+  {
+   "fieldname": "column_break_cyqp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pan_card_photo_front_only",
+   "fieldtype": "Attach Image",
+   "label": "PAN Card Photo Front Only"
+  },
+  {
+   "fieldname": "bank_passbook_or_cheque",
+   "fieldtype": "Attach",
+   "label": "BANK PASSBOOK OR CHEQUE"
+  },
+  {
+   "fieldname": "pvc_police_verification_certificate_or_passport",
+   "fieldtype": "Attach Image",
+   "label": "PVC (Police Verification Certificate) OR PASSPORT"
+  },
+  {
+   "fieldname": "previous_company_experiencerelieving_letter",
+   "fieldtype": "Attach",
+   "label": "Previous Company Experience/Relieving Letter"
+  },
+  {
+   "fieldname": "upload_updated_resume_only",
+   "fieldtype": "Attach",
+   "label": "Upload Updated Resume Only"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-06-17 18:58:17.287202",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "Candidate Registeration Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

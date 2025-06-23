@@ -1,0 +1,276 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-11 11:40:55.418481",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ra75",
+  "amended_from",
+  "insurance_no",
+  "name_in_block_letters",
+  "fathershusbands_name",
+  "present_address",
+  "permanent_address",
+  "column_break_rboi",
+  "date_of_birth",
+  "sex",
+  "marital_status",
+  "brach_office",
+  "dispensary",
+  "date_of_allotment_of_ins_no",
+  "date_of_issue_of_tci",
+  "employers_particulars_section",
+  "employers_code_no",
+  "employee_name",
+  "column_break_eooa",
+  "date_of_appointment",
+  "address_of_the_employer",
+  "previous_employement_details_section",
+  "previous_ins_no",
+  "previousemployeaddres",
+  "column_break_ajln",
+  "previous_employee_name",
+  "previous_employee_code",
+  "details_of_nominee_section",
+  "name1",
+  "address",
+  "column_break_dwwo",
+  "relationship",
+  "familypersondob",
+  "realtionship_with_the_employee",
+  "section_break_hpyu",
+  "family_particulars_of_insured_person_column",
+  "table_katw"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ra75",
+   "fieldtype": "Section Break",
+   "label": "INSURED PERSON'S PARTICULARS"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "ESI Form 1 Declaration",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "insurance_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Insurance No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "name_in_block_letters",
+   "fieldtype": "Data",
+   "label": "Name in block letters"
+  },
+  {
+   "fieldname": "fathershusbands_name",
+   "fieldtype": "Data",
+   "label": "Father's/Husband's Name"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Select",
+   "label": "Marital Status",
+   "options": "\nMarried\nUnmarried\nWidowed"
+  },
+  {
+   "fieldname": "sex",
+   "fieldtype": "Select",
+   "label": "Sex",
+   "options": "\nMale\nFemale\nOthers"
+  },
+  {
+   "fieldname": "present_address",
+   "fieldtype": "Link",
+   "label": "Present Address",
+   "options": "Address"
+  },
+  {
+   "fieldname": "permanent_address",
+   "fieldtype": "Link",
+   "label": "Permanent Address",
+   "options": "Address"
+  },
+  {
+   "fieldname": "brach_office",
+   "fieldtype": "Data",
+   "label": "Brach Office"
+  },
+  {
+   "fieldname": "dispensary",
+   "fieldtype": "Data",
+   "label": "Dispensary"
+  },
+  {
+   "fieldname": "column_break_rboi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "employers_particulars_section",
+   "fieldtype": "Section Break",
+   "label": "EMPLOYER'S PARTICULARS"
+  },
+  {
+   "fieldname": "employers_code_no",
+   "fieldtype": "Data",
+   "label": "Employer's Code No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_appointment",
+   "fieldtype": "Data",
+   "label": "Date of Appointment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Link",
+   "label": "Employee Name",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address_of_the_employer",
+   "fieldtype": "Link",
+   "label": "Address of the Employer",
+   "options": "Address"
+  },
+  {
+   "fieldname": "column_break_eooa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "previous_employement_details_section",
+   "fieldtype": "Section Break",
+   "label": "PREVIOUS EMPLOYEMENT DETAILS"
+  },
+  {
+   "fieldname": "previous_ins_no",
+   "fieldtype": "Data",
+   "label": "Previous Ins. No"
+  },
+  {
+   "fieldname": "previousemployeaddres",
+   "fieldtype": "Link",
+   "label": "Employee Address",
+   "options": "Address"
+  },
+  {
+   "fieldname": "column_break_ajln",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "previous_employee_name",
+   "fieldtype": "Link",
+   "label": "Employee Name",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "previous_employee_code",
+   "fieldtype": "Data",
+   "label": "Employer's Code No"
+  },
+  {
+   "fieldname": "details_of_nominee_section",
+   "fieldtype": "Section Break",
+   "label": "DETAILS OF NOMINEE"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Address"
+  },
+  {
+   "fieldname": "column_break_dwwo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "relationship",
+   "fieldtype": "Data",
+   "label": "Relationship"
+  },
+  {
+   "fieldname": "familypersondob",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "realtionship_with_the_employee",
+   "fieldtype": "Select",
+   "label": "Realtionship with the Employee",
+   "options": "\nFather\nMother\nHusband\nWife\nBrother\nSister"
+  },
+  {
+   "fieldname": "section_break_hpyu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_katw",
+   "fieldtype": "Table",
+   "options": "ESI Form 1 Declaration Family Details"
+  },
+  {
+   "fieldname": "family_particulars_of_insured_person_column",
+   "fieldtype": "Column Break",
+   "label": "Family Particulars of Insured person"
+  },
+  {
+   "fieldname": "date_of_allotment_of_ins_no",
+   "fieldtype": "Date",
+   "label": " DATE OF ALLOTMENT OF INS. NO"
+  },
+  {
+   "fieldname": "date_of_issue_of_tci",
+   "fieldtype": "Data",
+   "label": "Date of Issue of T.C.I"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-06-11 16:51:48.015597",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "ESI Form 1 Declaration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

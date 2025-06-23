@@ -415,7 +415,7 @@
    "no_copy": 1,
    "oldfieldname": "amended_from",
    "oldfieldtype": "Data",
-   "options": "Opportunity",
+   "options": "Bid",
    "print_hide": 1,
    "read_only": 1,
    "width": "150px"
@@ -838,7 +838,7 @@
  "icon": "fa fa-info-sign",
  "is_submittable": 1,
  "links": [],
- "modified": "2025-03-19 17:02:22.738931",
+ "modified": "2025-04-14 13:34:44.158921",
  "modified_by": "Administrator",
  "module": "Swati",
  "name": "Bid",

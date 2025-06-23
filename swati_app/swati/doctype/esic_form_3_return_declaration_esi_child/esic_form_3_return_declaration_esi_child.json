@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-13 12:29:23.210444",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employe_name",
+  "distinguishing_no_with_the_employer_if_any",
+  "fathers_or_husbands_name",
+  "insurance_no_allotted_by_the_corporation"
+ ],
+ "fields": [
+  {
+   "fieldname": "employe_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employe Name",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "distinguishing_no_with_the_employer_if_any",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Distinguishing No with the employer if any"
+  },
+  {
+   "fieldname": "fathers_or_husbands_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Father's or Husband's Name"
+  },
+  {
+   "fieldname": "insurance_no_allotted_by_the_corporation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Insurance No. allotted by the Corporation"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-06-13 12:32:37.759881",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "ESIC Form 3 Return Declaration ESI Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

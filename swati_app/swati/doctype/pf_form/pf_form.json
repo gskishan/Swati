@@ -1,0 +1,330 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-16 12:26:15.559795",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ukgp",
+  "amended_from",
+  "name_of_member",
+  "father",
+  "father_name",
+  "spouse",
+  "spouse_name",
+  "gender",
+  "marital_status",
+  "date_of_birth",
+  "email_id",
+  "column_break_htdc",
+  "aadhar_no",
+  "mobile_number",
+  "employee_provident_name",
+  "wheather_earlier_a_member_of_employee_s_pension_scheme_1995",
+  "section_break_kzuy",
+  "bank_account_no",
+  "ifsc_code",
+  "perment_account_no",
+  "column_break_vlpy",
+  "date",
+  "place",
+  "previous_employement_details_section",
+  "universal_account_number",
+  "previous_pf_account_number",
+  "date_of_exit_from_previous_employement",
+  "scheme_certificate_no",
+  "pension_payment_order",
+  "column_break_zhel",
+  "international_worker",
+  "if_yes_state_country_of_origin",
+  "passport_number",
+  "validity_of_passport",
+  "validity_of_passport_to",
+  "section_break_dlxz",
+  "employee",
+  "date_of_joining",
+  "pf_number",
+  "declaration_date",
+  "column_break_gzim",
+  "previous_member_of_epf",
+  "kyc_status",
+  "tagged_with_uan",
+  "member_id_as_declared",
+  "declared_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ukgp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "PF Form",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "name_of_member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Name Of Member",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "father",
+   "fieldtype": "Check",
+   "label": "Father"
+  },
+  {
+   "fieldname": "father_name",
+   "fieldtype": "Data",
+   "label": "Father Name"
+  },
+  {
+   "default": "0",
+   "fieldname": "spouse",
+   "fieldtype": "Check",
+   "label": "Spouse"
+  },
+  {
+   "fieldname": "spouse_name",
+   "fieldtype": "Data",
+   "label": "Spouse Name"
+  },
+  {
+   "fieldname": "column_break_htdc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date Of Birth"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "\nMale\nFemale\nTransgender"
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Select",
+   "label": "Marital Status",
+   "options": "\nUnmarried\nMarried\nWidow\nWidower\nDivorcee"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email ID"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "Mobile Number"
+  },
+  {
+   "fieldname": "employee_provident_name",
+   "fieldtype": "Select",
+   "label": "Wheather Earlier a Member of Employee's  Provident Fund scheme, 1952",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "wheather_earlier_a_member_of_employee_s_pension_scheme_1995",
+   "fieldtype": "Select",
+   "label": "Wheather Earlier a Member of Employee' s Pension Scheme, 1995",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "previous_employement_details_section",
+   "fieldtype": "Section Break",
+   "label": "Previous Employement Details"
+  },
+  {
+   "fieldname": "universal_account_number",
+   "fieldtype": "Data",
+   "label": "Universal Account Number"
+  },
+  {
+   "fieldname": "previous_pf_account_number",
+   "fieldtype": "Data",
+   "label": "Previous PF Account Number"
+  },
+  {
+   "fieldname": "date_of_exit_from_previous_employement",
+   "fieldtype": "Date",
+   "label": "Date Of Exit From Previous Employement"
+  },
+  {
+   "fieldname": "scheme_certificate_no",
+   "fieldtype": "Data",
+   "label": "Scheme Certificate No"
+  },
+  {
+   "fieldname": "pension_payment_order",
+   "fieldtype": "Data",
+   "label": "Pension Payment Order"
+  },
+  {
+   "fieldname": "column_break_zhel",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "international_worker",
+   "fieldtype": "Check",
+   "label": "International Worker"
+  },
+  {
+   "fieldname": "if_yes_state_country_of_origin",
+   "fieldtype": "Data",
+   "label": "If yes, State Country Of Origin"
+  },
+  {
+   "fieldname": "passport_number",
+   "fieldtype": "Data",
+   "label": "Passport Number"
+  },
+  {
+   "fieldname": "validity_of_passport",
+   "fieldtype": "Date",
+   "label": "Validity Of Passport From"
+  },
+  {
+   "fieldname": "bank_account_no",
+   "fieldtype": "Data",
+   "label": "Bank Account No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ifsc_code",
+   "fieldtype": "Data",
+   "label": "IFSC Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "aadhar_no",
+   "fieldtype": "Data",
+   "label": "Aadhar No"
+  },
+  {
+   "fieldname": "perment_account_no",
+   "fieldtype": "Data",
+   "label": "Perment Account No"
+  },
+  {
+   "fieldname": "section_break_dlxz",
+   "fieldtype": "Section Break",
+   "label": "Declaration by Present employee"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "date_of_joining",
+   "fieldtype": "Date",
+   "label": "Date Of Joining"
+  },
+  {
+   "fieldname": "pf_number",
+   "fieldtype": "Data",
+   "label": "PF Number"
+  },
+  {
+   "fieldname": "column_break_gzim",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "previous_member_of_epf",
+   "fieldtype": "Check",
+   "label": "Previous Member of EPF"
+  },
+  {
+   "fieldname": "kyc_status",
+   "fieldtype": "Select",
+   "label": "KYC Status",
+   "options": "\nUploaded\nNot Uploaded\nApproved With DSC"
+  },
+  {
+   "default": "0",
+   "fieldname": "tagged_with_uan",
+   "fieldtype": "Check",
+   "label": "Tagged With UAN"
+  },
+  {
+   "fieldname": "member_id_as_declared",
+   "fieldtype": "Data",
+   "label": "Member ID as Declared"
+  },
+  {
+   "fieldname": "declared_by",
+   "fieldtype": "Data",
+   "label": "Declared by"
+  },
+  {
+   "fieldname": "section_break_kzuy",
+   "fieldtype": "Section Break",
+   "label": "KYC Details"
+  },
+  {
+   "fieldname": "validity_of_passport_to",
+   "fieldtype": "Date",
+   "label": "Validity Of Passport To"
+  },
+  {
+   "fieldname": "column_break_vlpy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "place",
+   "fieldtype": "Data",
+   "label": "Place"
+  },
+  {
+   "fieldname": "declaration_date",
+   "fieldtype": "Date",
+   "label": "Declaration Date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-06-16 17:41:45.027227",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "PF Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

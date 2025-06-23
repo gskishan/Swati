@@ -1,0 +1,151 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-16 11:29:50.845123",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_o8so",
+  "amended_from",
+  "full_name",
+  "address",
+  "departmentsectiobranch_where_last_employed",
+  "date_cause_of_termination_of_service",
+  "amount_of_wages_lastly_claimed",
+  "disablement_effective_date",
+  "reason_for_termination",
+  "column_break_jpaa",
+  "date_of_appointment",
+  "place",
+  "date",
+  "total_period_of_service",
+  "post_held_with_ticket_no_or_serial_no",
+  "amount_of_gratuity_claimed",
+  "payment_mode"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_o8so",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gratuity Form",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Full Name",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Address",
+   "options": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "departmentsectiobranch_where_last_employed",
+   "fieldtype": "Data",
+   "label": "Department/Section/Branch Where last Employed"
+  },
+  {
+   "fieldname": "post_held_with_ticket_no_or_serial_no",
+   "fieldtype": "Data",
+   "label": "Post Held With Ticket No or Serial No"
+  },
+  {
+   "fieldname": "date_of_appointment",
+   "fieldtype": "Date",
+   "label": "Date Of Appointment"
+  },
+  {
+   "fieldname": "date_cause_of_termination_of_service",
+   "fieldtype": "Date",
+   "label": "Date Cause of Termination Of Service"
+  },
+  {
+   "fieldname": "total_period_of_service",
+   "fieldtype": "Data",
+   "label": "Total Period Of Service"
+  },
+  {
+   "fieldname": "amount_of_wages_lastly_claimed",
+   "fieldtype": "Int",
+   "label": "Amount Of Wages Lastly Claimed"
+  },
+  {
+   "fieldname": "amount_of_gratuity_claimed",
+   "fieldtype": "Int",
+   "label": "Amount Of Gratuity Claimed"
+  },
+  {
+   "fieldname": "place",
+   "fieldtype": "Data",
+   "label": "Place"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_jpaa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_mode",
+   "fieldtype": "Select",
+   "label": "Payment Mode",
+   "options": "\nCash\nCheque"
+  },
+  {
+   "fieldname": "disablement_effective_date",
+   "fieldtype": "Date",
+   "label": "Disablement Effective Date"
+  },
+  {
+   "fieldname": "reason_for_termination",
+   "fieldtype": "Select",
+   "label": "Reason for Termination",
+   "options": "\nSuperannoation\nRetirement\nResignation"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-06-16 12:00:47.547536",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "Gratuity Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

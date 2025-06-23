@@ -1,0 +1,168 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-18 12:18:01.207507",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_rcuo",
+  "amended_from",
+  "employee",
+  "section_break_tsag",
+  "outstanding_loans__salary_advance",
+  "traveling_and_daily_allowance",
+  "mobile_surrendered_and_working_status",
+  "sim_deactivation",
+  "any_other_recovery",
+  "section_break_svfx",
+  "it_department_admin_department_column",
+  "desktop_password_disabled",
+  "laptop_returned",
+  "pen_drive_usb_drive",
+  "any_other_please_specify",
+  "section_break_dxcn",
+  "notice_pay_recovery",
+  "leave_balance",
+  "id_cards__access_cards__business_card",
+  "drawer_key_or_any_other_key",
+  "any_other_recoveryhr"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_rcuo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "NOC Form",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "section_break_tsag",
+   "fieldtype": "Section Break",
+   "label": "ACCOUNTS / FINANCE DEPARTMENT"
+  },
+  {
+   "fieldname": "outstanding_loans__salary_advance",
+   "fieldtype": "Data",
+   "label": "Outstanding loans / Salary Advance"
+  },
+  {
+   "fieldname": "traveling_and_daily_allowance",
+   "fieldtype": "Data",
+   "label": "Traveling and Daily Allowance"
+  },
+  {
+   "fieldname": "mobile_surrendered_and_working_status",
+   "fieldtype": "Data",
+   "label": "Mobile Surrendered and working Status"
+  },
+  {
+   "fieldname": "sim_deactivation",
+   "fieldtype": "Data",
+   "label": "Sim Deactivation"
+  },
+  {
+   "fieldname": "any_other_recovery",
+   "fieldtype": "Data",
+   "label": "Any other Recovery"
+  },
+  {
+   "fieldname": "section_break_svfx",
+   "fieldtype": "Section Break",
+   "label": "IT DEPARTMENT /ADMIN DEPARTMENT"
+  },
+  {
+   "fieldname": "desktop_password_disabled",
+   "fieldtype": "Data",
+   "label": "Desktop Password Disabled"
+  },
+  {
+   "fieldname": "laptop_returned",
+   "fieldtype": "Data",
+   "label": "Laptop Returned"
+  },
+  {
+   "fieldname": "pen_drive_usb_drive",
+   "fieldtype": "Data",
+   "label": "Pen drive /USB Drive"
+  },
+  {
+   "fieldname": "any_other_please_specify",
+   "fieldtype": "Data",
+   "label": "Any Other (Please Specify)"
+  },
+  {
+   "fieldname": "it_department_admin_department_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_dxcn",
+   "fieldtype": "Section Break",
+   "label": "HR DEPARTMENT"
+  },
+  {
+   "fieldname": "notice_pay_recovery",
+   "fieldtype": "Data",
+   "label": "Notice Pay Recovery"
+  },
+  {
+   "fieldname": "leave_balance",
+   "fieldtype": "Data",
+   "label": "Leave Balance"
+  },
+  {
+   "fieldname": "id_cards__access_cards__business_card",
+   "fieldtype": "Data",
+   "label": "ID Cards / Access Cards / Business Card"
+  },
+  {
+   "fieldname": "drawer_key_or_any_other_key",
+   "fieldtype": "Data",
+   "label": "Drawer Key or Any Other Key"
+  },
+  {
+   "fieldname": "any_other_recoveryhr",
+   "fieldtype": "Data",
+   "label": "Any Other Recovery(HR)"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-06-18 12:32:15.464114",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "NOC Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

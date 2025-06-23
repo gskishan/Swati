@@ -1,0 +1,39 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-16 10:51:45.120290",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "full_name_and_address_of_witness",
+  "siganature_of_witness"
+ ],
+ "fields": [
+  {
+   "fieldname": "full_name_and_address_of_witness",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name and Address Of Witness"
+  },
+  {
+   "fieldname": "siganature_of_witness",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Siganature of witness"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-06-16 10:52:55.900770",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "Form F Witness Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

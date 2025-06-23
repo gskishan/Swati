@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-17 09:35:07.545628",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "asset_type",
+  "description",
+  "serial__asset_no",
+  "condition_returned",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "asset_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Asset Type"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "serial__asset_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Serial / Asset No "
+  },
+  {
+   "fieldname": "condition_returned",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Condition (Returned)"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Remarks"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-06-17 09:37:09.916887",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "Asset Issuance Form Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

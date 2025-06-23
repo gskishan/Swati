@@ -1,0 +1,239 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-13 15:07:15.267689",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_lj8k",
+  "establishment_name_address",
+  "column_break_oift",
+  "employee_name",
+  "form_f_nominee_details_section",
+  "table_tnnh",
+  "statement_section",
+  "sex",
+  "marital_status",
+  "religion",
+  "department",
+  "post_ticket",
+  "permanent_address",
+  "date",
+  "place",
+  "column_break_lyov",
+  "appointment_date",
+  "state",
+  "sub_division",
+  "district",
+  "village",
+  "thana",
+  "post_office",
+  "declaration_by_witnesses_section",
+  "declaration_by_witnesses",
+  "witness_date",
+  "witenss_place",
+  "certificate_by_the_employer_section",
+  "employers_reference_no",
+  "designation",
+  "column_break_xocy",
+  "certificate_date",
+  "acknowledgement_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_lj8k",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "establishment_name_address",
+   "fieldtype": "Data",
+   "label": "Establishment Name and Address"
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee Full Name",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_oift",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "form_f_nominee_details_section",
+   "fieldtype": "Section Break",
+   "label": "Form F Nominee Details"
+  },
+  {
+   "fieldname": "table_tnnh",
+   "fieldtype": "Table",
+   "options": "Form F Nominee Child"
+  },
+  {
+   "fieldname": "statement_section",
+   "fieldtype": "Section Break",
+   "label": "Statement"
+  },
+  {
+   "fieldname": "sex",
+   "fieldtype": "Select",
+   "label": "Sex",
+   "options": "\nMale\nFemale\nOther"
+  },
+  {
+   "fieldname": "religion",
+   "fieldtype": "Data",
+   "label": "Religion"
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Select",
+   "label": "Marital Status",
+   "options": "Unmarried\nMarried\nWidow"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department/Branch/Section"
+  },
+  {
+   "fieldname": "post_ticket",
+   "fieldtype": "Data",
+   "label": "Post held with Ticket/Serial No"
+  },
+  {
+   "fieldname": "appointment_date",
+   "fieldtype": "Date",
+   "label": "Date of Appointment"
+  },
+  {
+   "fieldname": "permanent_address",
+   "fieldtype": "Link",
+   "label": "Permanent Address",
+   "options": "Address"
+  },
+  {
+   "fieldname": "column_break_lyov",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "village",
+   "fieldtype": "Data",
+   "label": "Village"
+  },
+  {
+   "fieldname": "thana",
+   "fieldtype": "Data",
+   "label": "Thana"
+  },
+  {
+   "fieldname": "sub_division",
+   "fieldtype": "Data",
+   "label": "Sub Division"
+  },
+  {
+   "fieldname": "post_office",
+   "fieldtype": "Data",
+   "label": "Post Office"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "label": "District"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "place",
+   "fieldtype": "Data",
+   "label": "Place"
+  },
+  {
+   "fieldname": "certificate_by_the_employer_section",
+   "fieldtype": "Section Break",
+   "label": "Certificate by the Employer"
+  },
+  {
+   "fieldname": "employers_reference_no",
+   "fieldtype": "Data",
+   "label": "Employer's Reference No"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "fieldname": "column_break_xocy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "certificate_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "acknowledgement_date",
+   "fieldtype": "Date",
+   "label": "Acknowledgement Date"
+  },
+  {
+   "fieldname": "declaration_by_witnesses_section",
+   "fieldtype": "Section Break",
+   "label": "Declaration By Witnesses"
+  },
+  {
+   "fieldname": "declaration_by_witnesses",
+   "fieldtype": "Table",
+   "label": "Declaration By Witnesses",
+   "options": "Form F Witness Child"
+  },
+  {
+   "fieldname": "witness_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "witenss_place",
+   "fieldtype": "Data",
+   "label": "Place"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-06-16 11:29:35.853447",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "Form F Gratuity",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

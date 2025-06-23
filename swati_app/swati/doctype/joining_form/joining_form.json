@@ -1,0 +1,465 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-17 10:31:22.317881",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_xqas",
+  "amended_from",
+  "employee_name",
+  "employee_id",
+  "date_of_joining",
+  "department",
+  "position_joining_for",
+  "father_name",
+  "father_occupation",
+  "permament_address",
+  "column_break_pxqt",
+  "email",
+  "blood_group",
+  "total_experience",
+  "contact_no",
+  "alternative_no",
+  "date_of_birth",
+  "marital_status",
+  "spouse_name",
+  "no_of_children",
+  "present_address",
+  "emergency_contact_person_details_section",
+  "person_1",
+  "phone_no",
+  "relationship",
+  "column_break_vsph",
+  "person_2",
+  "p_phone",
+  "p_relation",
+  "section_break_lwlr",
+  "any_friends_or_relatives_works_here",
+  "if_yes_name",
+  "r_phoeno",
+  "column_break_wljf",
+  "r_relaation",
+  "previous_employment_details_section",
+  "company_name",
+  "address",
+  "employee_code",
+  "designation",
+  "work_location",
+  "hr_name",
+  "hr_contact_no",
+  "hr_email_id",
+  "column_break_yqgf",
+  "manager_name",
+  "manager_email_id",
+  "manager_contact_no",
+  "reason_for_leaving",
+  "tenure",
+  "salary",
+  "reference_details_section",
+  "reference_name",
+  "reference_email_id",
+  "column_break_kbrv",
+  "r_contact",
+  "r_designation",
+  "educational_and_training_details_section",
+  "table_ione",
+  "known_languages_details_section",
+  "table_pitv",
+  "statutory_details_section",
+  "pan_no",
+  "uan_number",
+  "pf_number",
+  "column_break_corb",
+  "esic_number",
+  "employer_code",
+  "date"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_xqas",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Joining Form",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee_id",
+   "fieldtype": "Data",
+   "label": "Employee ID"
+  },
+  {
+   "fieldname": "date_of_joining",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Date Of Joining",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
+  },
+  {
+   "fieldname": "position_joining_for",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Position Joining for",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_pxqt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "blood_group",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Blood Group",
+   "options": "O+\nO-\nA+\nA-\nB+\nB-\nAB+\nAB-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_experience",
+   "fieldtype": "Data",
+   "label": "Total Experience"
+  },
+  {
+   "fieldname": "contact_no",
+   "fieldtype": "Data",
+   "label": "Contact No"
+  },
+  {
+   "fieldname": "alternative_no",
+   "fieldtype": "Data",
+   "label": "Alternative No"
+  },
+  {
+   "fieldname": "permament_address",
+   "fieldtype": "Text",
+   "label": "Permament Address"
+  },
+  {
+   "fieldname": "present_address",
+   "fieldtype": "Small Text",
+   "label": "Present Address"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date Of Birth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Select",
+   "label": "Marital Status",
+   "options": "\nSingle\nMarried"
+  },
+  {
+   "fieldname": "spouse_name",
+   "fieldtype": "Data",
+   "label": "Spouse Name"
+  },
+  {
+   "fieldname": "no_of_children",
+   "fieldtype": "Int",
+   "label": "No of Children"
+  },
+  {
+   "fieldname": "father_name",
+   "fieldtype": "Data",
+   "label": "Father Name"
+  },
+  {
+   "fieldname": "father_occupation",
+   "fieldtype": "Data",
+   "label": "Father Occupation"
+  },
+  {
+   "fieldname": "emergency_contact_person_details_section",
+   "fieldtype": "Section Break",
+   "label": "Emergency Contact Person Details"
+  },
+  {
+   "fieldname": "person_1",
+   "fieldtype": "Data",
+   "label": "Person 1"
+  },
+  {
+   "fieldname": "phone_no",
+   "fieldtype": "Data",
+   "label": "Phone No"
+  },
+  {
+   "fieldname": "relationship",
+   "fieldtype": "Select",
+   "label": "Relationship",
+   "options": "Parent\nSpouse\nFriend"
+  },
+  {
+   "fieldname": "column_break_vsph",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "person_2",
+   "fieldtype": "Data",
+   "label": "Person 2"
+  },
+  {
+   "fieldname": "p_phone",
+   "fieldtype": "Data",
+   "label": "Phone No"
+  },
+  {
+   "fieldname": "p_relation",
+   "fieldtype": "Select",
+   "label": "Relationship",
+   "options": "Parent\nSpouse\nFriend"
+  },
+  {
+   "fieldname": "section_break_lwlr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "any_friends_or_relatives_works_here",
+   "fieldtype": "Check",
+   "label": "Any Friends or Relatives Works here"
+  },
+  {
+   "fieldname": "if_yes_name",
+   "fieldtype": "Data",
+   "label": "If Yes, Name"
+  },
+  {
+   "fieldname": "r_phoeno",
+   "fieldtype": "Data",
+   "label": "Phone No"
+  },
+  {
+   "fieldname": "r_relaation",
+   "fieldtype": "Select",
+   "label": "Relationship",
+   "options": "Parent\nSpouse\nFriend"
+  },
+  {
+   "fieldname": "column_break_wljf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "previous_employment_details_section",
+   "fieldtype": "Section Break",
+   "label": "Previous employment Details"
+  },
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "label": "Company Name"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "employee_code",
+   "fieldtype": "Data",
+   "label": "Employee Code"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "fieldname": "work_location",
+   "fieldtype": "Data",
+   "label": "Work Location"
+  },
+  {
+   "fieldname": "column_break_yqgf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "manager_name",
+   "fieldtype": "Data",
+   "label": "Manager Name"
+  },
+  {
+   "fieldname": "manager_email_id",
+   "fieldtype": "Data",
+   "label": "Manager Email ID"
+  },
+  {
+   "fieldname": "manager_contact_no",
+   "fieldtype": "Data",
+   "label": "Manager Contact No"
+  },
+  {
+   "fieldname": "reason_for_leaving",
+   "fieldtype": "Data",
+   "label": "Reason For Leaving"
+  },
+  {
+   "fieldname": "tenure",
+   "fieldtype": "Data",
+   "label": "Tenure"
+  },
+  {
+   "fieldname": "salary",
+   "fieldtype": "Currency",
+   "label": "Salary"
+  },
+  {
+   "fieldname": "hr_name",
+   "fieldtype": "Data",
+   "label": "HR Name"
+  },
+  {
+   "fieldname": "hr_contact_no",
+   "fieldtype": "Data",
+   "label": "HR Contact No"
+  },
+  {
+   "fieldname": "hr_email_id",
+   "fieldtype": "Data",
+   "label": "HR Email ID"
+  },
+  {
+   "fieldname": "reference_details_section",
+   "fieldtype": "Section Break",
+   "label": "Reference Details"
+  },
+  {
+   "fieldname": "reference_name",
+   "fieldtype": "Data",
+   "label": "Reference Name"
+  },
+  {
+   "fieldname": "reference_email_id",
+   "fieldtype": "Data",
+   "label": "Reference Email ID"
+  },
+  {
+   "fieldname": "column_break_kbrv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "r_contact",
+   "fieldtype": "Data",
+   "label": "Contact No"
+  },
+  {
+   "fieldname": "r_designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "fieldname": "educational_and_training_details_section",
+   "fieldtype": "Section Break",
+   "label": "Educational and Training Details"
+  },
+  {
+   "fieldname": "table_ione",
+   "fieldtype": "Table",
+   "options": "Educational Qualification Entry"
+  },
+  {
+   "fieldname": "known_languages_details_section",
+   "fieldtype": "Section Break",
+   "label": "Known Languages Details"
+  },
+  {
+   "fieldname": "table_pitv",
+   "fieldtype": "Table",
+   "options": "Known Languages Details"
+  },
+  {
+   "fieldname": "statutory_details_section",
+   "fieldtype": "Section Break",
+   "label": "Statutory Details"
+  },
+  {
+   "fieldname": "pan_no",
+   "fieldtype": "Data",
+   "label": "PAN No"
+  },
+  {
+   "fieldname": "uan_number",
+   "fieldtype": "Data",
+   "label": "UAN Number\t"
+  },
+  {
+   "fieldname": "pf_number",
+   "fieldtype": "Data",
+   "label": "PF Number"
+  },
+  {
+   "fieldname": "column_break_corb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "esic_number",
+   "fieldtype": "Data",
+   "label": "ESIC Number"
+  },
+  {
+   "fieldname": "employer_code",
+   "fieldtype": "Data",
+   "label": "Employer Code"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-06-17 11:31:56.641865",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "Joining Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-11 14:43:18.130264",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "familyname",
+  "familtdob",
+  "relationship_with_the_employee",
+  "whether_residing_with_himher",
+  "if_no_state_place_of_residence"
+ ],
+ "fields": [
+  {
+   "fieldname": "familyname",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name"
+  },
+  {
+   "fieldname": "familtdob",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "relationship_with_the_employee",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Relationship with the Employee",
+   "options": "\nFather\nMother\nHusband\nWife\nBrother\nSister"
+  },
+  {
+   "fieldname": "whether_residing_with_himher",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Whether Residing with him/her",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "if_no_state_place_of_residence",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "If' No' state Place of Residence",
+   "options": "\nYes\nNo"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-06-11 14:50:18.986243",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "ESI Form 1 Declaration Family Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

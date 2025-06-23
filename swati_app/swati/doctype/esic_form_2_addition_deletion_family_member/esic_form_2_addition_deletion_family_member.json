@@ -1,0 +1,135 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-13 10:22:02.622176",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_xkl1",
+  "amended_from",
+  "name_of_insured_person",
+  "name_in_block_letters",
+  "column_break_neju",
+  "insurence_no",
+  "place",
+  "date",
+  "section_break_thib",
+  "table_tjnk",
+  "particulars_of_the_employer_section",
+  "employee_name",
+  "address",
+  "column_break_dsmg",
+  "code_no"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_xkl1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "ESIC Form 2 Addition Deletion Family Member",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "name_of_insured_person",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name Of Insured Person",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_neju",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "insurence_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Insurence No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_thib",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "table_tjnk",
+   "fieldtype": "Table",
+   "options": "ESIC Form 2 Addition Deletion Family Member child"
+  },
+  {
+   "fieldname": "place",
+   "fieldtype": "Data",
+   "label": "Place"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "name_in_block_letters",
+   "fieldtype": "Data",
+   "label": "Name In Block Letters"
+  },
+  {
+   "fieldname": "particulars_of_the_employer_section",
+   "fieldtype": "Section Break",
+   "label": "Particulars of the Employer"
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Link",
+   "label": "Employee Name",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Address"
+  },
+  {
+   "fieldname": "column_break_dsmg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "code_no",
+   "fieldtype": "Data",
+   "label": "Code No"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-06-13 10:45:08.589526",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "ESIC Form 2 Addition Deletion Family Member",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

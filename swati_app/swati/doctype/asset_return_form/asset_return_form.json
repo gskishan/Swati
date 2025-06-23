@@ -1,0 +1,152 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-16 18:19:31.157350",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_u1ca",
+  "amended_from",
+  "employee_name",
+  "employee_id",
+  "date_of_return",
+  "column_break_nojn",
+  "department",
+  "designation",
+  "declaration_date",
+  "nature_of_employee",
+  "section_break_dgrq",
+  "asset_details",
+  "verifier_details_section",
+  "name_of_verifier",
+  "verifier_desig",
+  "column_break_nulo",
+  "date",
+  "signature"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_u1ca",
+   "fieldtype": "Section Break",
+   "label": "Employee Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Asset Return Form",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee_id",
+   "fieldtype": "Data",
+   "label": "Employee ID"
+  },
+  {
+   "fieldname": "date_of_return",
+   "fieldtype": "Date",
+   "label": "Date Of Return"
+  },
+  {
+   "fieldname": "column_break_nojn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "fieldname": "section_break_dgrq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "asset_details",
+   "fieldtype": "Table",
+   "label": "Asset Details",
+   "options": "Asset Return Form Details"
+  },
+  {
+   "fieldname": "declaration_date",
+   "fieldtype": "Date",
+   "label": "Declaration Date"
+  },
+  {
+   "fieldname": "nature_of_employee",
+   "fieldtype": "Data",
+   "label": "Nature Of Employee"
+  },
+  {
+   "fieldname": "verifier_details_section",
+   "fieldtype": "Section Break",
+   "label": "Verifier Details"
+  },
+  {
+   "fieldname": "name_of_verifier",
+   "fieldtype": "Data",
+   "label": "Name Of verifier"
+  },
+  {
+   "fieldname": "verifier_desig",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "fieldname": "column_break_nulo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Data",
+   "label": "Signature"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-06-16 18:27:19.744871",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "Asset Return Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

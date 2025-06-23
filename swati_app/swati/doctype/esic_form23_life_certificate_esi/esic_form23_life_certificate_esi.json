@@ -1,0 +1,118 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-13 13:27:45.060251",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_8noo",
+  "amended_from",
+  "insurance_no",
+  "full_name",
+  "relation_type",
+  "claimant_signature",
+  "column_break_bdkt",
+  "day",
+  "month",
+  "year",
+  "date"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_8noo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "ESIC Form23 Life Certificate ESI",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "insurance_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Insurance No of Permanently Disable Person",
+   "reqd": 1
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Full Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "relation_type",
+   "fieldtype": "Select",
+   "label": "Relation Type (w/s/d of)",
+   "options": "Spouse\nSon\nDaughter"
+  },
+  {
+   "fieldname": "day",
+   "fieldtype": "Int",
+   "label": "Day",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "month",
+   "fieldtype": "Select",
+   "label": "Month",
+   "options": "January\nFebraury\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember",
+   "reqd": 1
+  },
+  {
+   "fieldname": "year",
+   "fieldtype": "Int",
+   "label": "Year",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "claimant_signature",
+   "fieldtype": "Data",
+   "label": "Claimant Signature"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_bdkt",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-06-13 13:38:06.926140",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "ESIC Form23 Life Certificate ESI",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

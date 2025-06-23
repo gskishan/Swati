@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-13 10:29:57.431457",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "date_of_birth",
+  "reasons_for_change_and_date",
+  "relationship_with_the_insured_person",
+  "residing_with_himher_yesno",
+  "if_no_district",
+  "if_no_state",
+  "name_of_impdisp_attached"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "relationship_with_the_insured_person",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Relationship with the insured Person",
+   "options": "\nSpouse\nChild\nParent"
+  },
+  {
+   "fieldname": "residing_with_himher_yesno",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Residing with him/her (Yes/No)",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "if_no_district",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "If No, District"
+  },
+  {
+   "fieldname": "if_no_state",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "If No, State"
+  },
+  {
+   "fieldname": "name_of_impdisp_attached",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name of IMP/Disp. Attached"
+  },
+  {
+   "fieldname": "reasons_for_change_and_date",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Reason(s) for Change and Date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-06-13 11:13:14.536869",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "ESIC Form 2 Addition Deletion Family Member child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

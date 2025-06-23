@@ -1,0 +1,145 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-17 09:32:46.036157",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_cp5l",
+  "amended_from",
+  "employee_name",
+  "employee_id",
+  "date_of_issue",
+  "column_break_afmi",
+  "designation",
+  "department",
+  "asset_details_section",
+  "table_qbiw",
+  "section_break_ndpc",
+  "date_of_acknowledgement",
+  "siganture_of_employee",
+  "column_break_pzao",
+  "name_of_issuer",
+  "issuer_desi",
+  "signature"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_cp5l",
+   "fieldtype": "Section Break",
+   "label": "Employee Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Asset Issuance Form",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee_id",
+   "fieldtype": "Data",
+   "label": "Employee ID"
+  },
+  {
+   "fieldname": "date_of_issue",
+   "fieldtype": "Date",
+   "label": "Date Of Issue"
+  },
+  {
+   "fieldname": "column_break_afmi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
+  },
+  {
+   "fieldname": "asset_details_section",
+   "fieldtype": "Section Break",
+   "label": "Asset Details"
+  },
+  {
+   "fieldname": "table_qbiw",
+   "fieldtype": "Table",
+   "options": "Asset Issuance Form Details"
+  },
+  {
+   "fieldname": "section_break_ndpc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_of_acknowledgement",
+   "fieldtype": "Date",
+   "label": "Date Of Acknowledgement"
+  },
+  {
+   "fieldname": "siganture_of_employee",
+   "fieldtype": "Data",
+   "label": "Siganture Of Employee"
+  },
+  {
+   "fieldname": "name_of_issuer",
+   "fieldtype": "Data",
+   "label": "Name Of issuer"
+  },
+  {
+   "fieldname": "issuer_desi",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Data",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "column_break_pzao",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-06-17 10:13:04.635194",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "Asset Issuance Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

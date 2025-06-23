@@ -1,0 +1,208 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-17 22:25:28.767921",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_t6fy",
+  "amended_from",
+  "member_name",
+  "uan",
+  "pf_account_number",
+  "aadhar_number",
+  "name_incorrect",
+  "name_correct",
+  "dob_incorrect",
+  "dob_correct",
+  "gender_incorrect",
+  "gender_correct",
+  "father_name_incorrect",
+  "father_name_correct",
+  "column_break_ncdh",
+  "mother_name_incorrect",
+  "mother_name_correct",
+  "spouse_name_incorrect",
+  "spouse_name_correct",
+  "doj_incorrect",
+  "doj_correct",
+  "dol_incorrect",
+  "dol_correct",
+  "reason_of_leaving",
+  "marital_status",
+  "nationality",
+  "designation"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_t6fy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Joint Declaration Form",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "member_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Member Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "uan",
+   "fieldtype": "Data",
+   "label": "UAN"
+  },
+  {
+   "fieldname": "pf_account_number",
+   "fieldtype": "Data",
+   "label": "PF Account Number"
+  },
+  {
+   "fieldname": "aadhar_number",
+   "fieldtype": "Data",
+   "label": "Aadhar Number"
+  },
+  {
+   "fieldname": "name_incorrect",
+   "fieldtype": "Data",
+   "label": "Name (Incorrect)"
+  },
+  {
+   "fieldname": "name_correct",
+   "fieldtype": "Data",
+   "label": "Name (Correct)"
+  },
+  {
+   "fieldname": "dob_incorrect",
+   "fieldtype": "Data",
+   "label": "DOB (Incorrect)"
+  },
+  {
+   "fieldname": "dob_correct",
+   "fieldtype": "Data",
+   "label": "DOB (Correct)"
+  },
+  {
+   "fieldname": "gender_incorrect",
+   "fieldtype": "Select",
+   "label": "Gender (Incorrect)",
+   "options": "Female\nMale\nOther"
+  },
+  {
+   "fieldname": "gender_correct",
+   "fieldtype": "Select",
+   "label": "Gender (Correct)",
+   "options": "Female\nMale\nOther"
+  },
+  {
+   "fieldname": "father_name_incorrect",
+   "fieldtype": "Data",
+   "label": "Father Name (Incorrect)"
+  },
+  {
+   "fieldname": "father_name_correct",
+   "fieldtype": "Data",
+   "label": "Father Name (Correct)"
+  },
+  {
+   "fieldname": "mother_name_incorrect",
+   "fieldtype": "Data",
+   "label": "Mother Name (Incorrect)"
+  },
+  {
+   "fieldname": "mother_name_correct",
+   "fieldtype": "Data",
+   "label": "Mother Name (Correct)"
+  },
+  {
+   "fieldname": "spouse_name_incorrect",
+   "fieldtype": "Data",
+   "label": "Spouse Name (Incorrect)"
+  },
+  {
+   "fieldname": "spouse_name_correct",
+   "fieldtype": "Data",
+   "label": "Spouse Name (Correct)"
+  },
+  {
+   "fieldname": "doj_incorrect",
+   "fieldtype": "Date",
+   "label": "DOJ (Incorrect)"
+  },
+  {
+   "fieldname": "doj_correct",
+   "fieldtype": "Date",
+   "label": "DOJ (Correct)"
+  },
+  {
+   "fieldname": "dol_incorrect",
+   "fieldtype": "Date",
+   "label": "DOL (Incorrect)"
+  },
+  {
+   "fieldname": "dol_correct",
+   "fieldtype": "Date",
+   "label": "DOL (Correct)"
+  },
+  {
+   "fieldname": "reason_of_leaving",
+   "fieldtype": "Data",
+   "label": "Reason of Leaving"
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Select",
+   "label": "Marital Status",
+   "options": "Married\nSingle"
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Data",
+   "label": "Nationality"
+  },
+  {
+   "fieldname": "column_break_ncdh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-06-17 23:45:15.971021",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "Joint Declaration Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

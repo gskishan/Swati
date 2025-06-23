@@ -1,0 +1,104 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-16 17:45:31.439176",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_rg4x",
+  "amended_from",
+  "employee_name_as_per_aadhar_card",
+  "employee_code",
+  "dsignation",
+  "job_application",
+  "column_break_irbo",
+  "aep_pass_image",
+  "aep_valid_from",
+  "aep_valid_to"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_rg4x",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Site Acknowledgement Form",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "employee_name_as_per_aadhar_card",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee Name (As Per Aadhar Card)",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee_code",
+   "fieldtype": "Data",
+   "label": "Employee Code"
+  },
+  {
+   "fieldname": "dsignation",
+   "fieldtype": "Data",
+   "label": "Dsignation"
+  },
+  {
+   "fieldname": "job_application",
+   "fieldtype": "Data",
+   "label": "Job Location"
+  },
+  {
+   "fieldname": "column_break_irbo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "aep_pass_image",
+   "fieldtype": "Attach Image",
+   "label": "AEP Pass Image"
+  },
+  {
+   "fieldname": "aep_valid_from",
+   "fieldtype": "Date",
+   "label": "AEP Valid From"
+  },
+  {
+   "fieldname": "aep_valid_to",
+   "fieldtype": "Date",
+   "label": "AEP Valid To"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-06-16 17:52:38.339137",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "Site Acknowledgement Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
