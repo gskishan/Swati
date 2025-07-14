@@ -166,7 +166,10 @@ doc_events = {
 		"before_save": "swati_app.custom_script.project.project.update_expected_date",
 
 	
-	}
+	},
+ "ToDo": {
+                "validate": "swati_app.custom_script.todo.todo.validate",
+ }
 }
 fixtures = ["Client Script"]
 # Scheduled Tasks
