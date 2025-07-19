@@ -26,6 +26,7 @@
   "expected_closing",
   "probability",
   "opportunity",
+  "lead",
   "section_break_hnqx",
   "custom_date_of_entry",
   "custom_lead_title",
@@ -833,12 +834,24 @@
    "hidden": 1,
    "label": "Opportunity",
    "options": "Opportunity"
+  },
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Lead",
+   "options": "Lead"
   }
  ],
  "icon": "fa fa-info-sign",
  "is_submittable": 1,
- "links": [],
- "modified": "2025-04-14 13:34:44.158921",
+ "links": [
+  {
+   "link_doctype": "Opportunity",
+   "link_fieldname": "custom_bid"
+  }
+ ],
+ "modified": "2025-07-19 12:57:30.310709",
  "modified_by": "Administrator",
  "module": "Swati",
  "name": "Bid",
