@@ -2,6 +2,39 @@
  {
   "docstatus": 0,
   "doctype": "Client Script",
+  "dt": "Employee Bonus Register",
+  "enabled": 1,
+  "modified": "2025-07-16 11:39:07.838239",
+  "module": "Swati",
+  "name": "Calculate the Sum Of Basic and VDA",
+  "script": "frappe.ui.form.on('Employee Bonus Register', {\n    full_basic(frm) {\n        frm.trigger('calculate_total');\n    },\n    full_vda(frm) {\n        frm.trigger('calculate_total');\n    },\n    calculate_total(frm) {\n        let basic = frm.doc.full_basic || 0;\n        let vda = frm.doc.full_vda || 0;\n        frm.set_value('total', basic + vda);\n    }\n});\n",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Employee Bonus Register",
+  "enabled": 1,
+  "modified": "2025-07-16 12:41:02.744851",
+  "module": "Swati",
+  "name": "Fetching The total Days",
+  "script": "frappe.ui.form.on('Employee Bonus Register', {\n    refresh(frm) {\n        frm.trigger(\"calculate_totals\");\n    },\n    \n    calculate_totals(frm) {\n        let total_days = 0;\n        let total_gross = 0;\n\n        (frm.doc.employee_salary_details || []).forEach(row => {\n            total_days += row.no_of_days || 0;\n            total_gross += row.sum_of_basic_and_da || 0;\n        });\n\n        frm.set_value(\"total_days\", total_days);\n        frm.set_value(\"total_gross\", total_gross);\n\n        // Bonus calculation\n        let bonus_percent = total_gross * 0.0833;\n        let bonus_amount = bonus_percent > 7000 ? 7000 : bonus_percent;\n\n        frm.set_value(\"bonus_833\", flt(bonus_percent, 2));\n        frm.set_value(\"bonus_amount\", flt(bonus_amount, 2));\n    }\n});\n\nfrappe.ui.form.on('Employee Salary Detail', {\n    no_of_days(frm, cdt, cdn) {\n        frm.trigger(\"calculate_totals\");\n    },\n    sum_of_basic_and_da(frm, cdt, cdn) {\n        frm.trigger(\"calculate_totals\");\n    },\n    employee_salary_details_remove(frm) {\n        frm.trigger(\"calculate_totals\");\n    }\n});\n",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Leave Register",
+  "enabled": 1,
+  "modified": "2025-07-17 13:42:15.722090",
+  "module": "Swati",
+  "name": "Total Availed Leaved calculation",
+  "script": "frappe.ui.form.on('Leave Entry Details', {\n    leave_from: function (frm, cdt, cdn) {\n        calculate_total_leaves(frm, cdt, cdn);\n    },\n    leave_to: function (frm, cdt, cdn) {\n        calculate_total_leaves(frm, cdt, cdn);\n    },\n    leave_from_privilege: function (frm, cdt, cdn) {\n        calculate_total_leaves(frm, cdt, cdn);\n    },\n    leave_to_privilege: function (frm, cdt, cdn) {\n        calculate_total_leaves(frm, cdt, cdn);\n    }\n});\n\nfunction calculate_total_leaves(frm, cdt, cdn) {\n    let row = locals[cdt][cdn];\n\n    // Casual or general leave\n    if (row.leave_from && row.leave_to) {\n        let from = frappe.datetime.str_to_obj(row.leave_from);\n        let to = frappe.datetime.str_to_obj(row.leave_to);\n\n        if (from > to) {\n            frappe.msgprint(\"Leave To Date cannot be before Leave From Date\");\n            frappe.model.set_value(cdt, cdn, \"total_leave_availed\", 0);\n        } else {\n            let diff_days = frappe.datetime.get_diff(row.leave_to, row.leave_from) + 1;\n            frappe.model.set_value(cdt, cdn, \"total_leave_availed\", diff_days);\n        }\n    }\n\n    // Privilege leave\n    if (row.leave_from_privilege && row.leave_to_privilege) {\n        let from_priv = frappe.datetime.str_to_obj(row.leave_from_privilege);\n        let to_priv = frappe.datetime.str_to_obj(row.leave_to_privilege);\n\n        if (from_priv > to_priv) {\n            frappe.msgprint(\"Privilege Leave To Date cannot be before From Date\");\n            frappe.model.set_value(cdt, cdn, \"total_leaves_availed_privilege\", 0);\n        } else {\n            let diff_priv = frappe.datetime.get_diff(row.leave_to_privilege, row.leave_from_privilege) + 1;\n            frappe.model.set_value(cdt, cdn, \"total_leaves_availed_privilege\", diff_priv);\n        }\n    }\n}\n",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
   "dt": "Material Request",
   "enabled": 1,
   "modified": "2025-04-23 19:16:33.022096",

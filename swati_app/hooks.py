@@ -171,7 +171,42 @@ doc_events = {
                 "validate": "swati_app.custom_script.todo.todo.validate",
  }
 }
-fixtures = ["Client Script"]
+
+
+
+fixtures = [
+    "Client Script",
+    {
+        "doctype": "DocType",
+        "filters": {
+            "name": ["in", [
+                "Wage Register - Form B",
+                "Minimum Wage Rate",
+                "Wages Register Employee Details",
+                "Employee Register Form A",
+                "Employee Register Details",
+                "Leave Register",
+                "Leave Entry Details",
+                "Mass Communication",
+                "Employee Bonus Register",
+                "Employee Salary Details"
+            ]]
+        }
+    },
+
+   {
+        "doctype": "Print Format",
+        "filters": [
+            ["name", "in", [
+                "Employee Bonus Format",
+                "Employee Register Form A",
+                "Leave Register Format",
+                "Wage Register Form Format"
+            ]]
+        ]
+    }
+]
+
 # Scheduled Tasks
 # ---------------
 
