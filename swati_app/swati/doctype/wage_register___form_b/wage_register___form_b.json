@@ -1,0 +1,118 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:name_of_establishment",
+ "creation": "2025-07-25 15:25:20.759350",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_nz96",
+  "amended_from",
+  "name_of_establishment",
+  "wage_period_from",
+  "column_break_kjxf",
+  "name_of_owner",
+  "wage_period_to_date",
+  "lin",
+  "section_break_brfv",
+  "rate_of_minimum_wages",
+  "section_break_fxvs",
+  "wage_register_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_nz96",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Wage Register - Form B",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "name_of_establishment",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name Of Establishment",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "wage_period_from",
+   "fieldtype": "Date",
+   "label": "Wage Period From Date"
+  },
+  {
+   "fieldname": "column_break_kjxf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "name_of_owner",
+   "fieldtype": "Data",
+   "label": "Name of Owner"
+  },
+  {
+   "fieldname": "wage_period_to_date",
+   "fieldtype": "Date",
+   "label": "Wage Period To Date"
+  },
+  {
+   "fieldname": "lin",
+   "fieldtype": "Data",
+   "label": "LIN"
+  },
+  {
+   "fieldname": "section_break_brfv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rate_of_minimum_wages",
+   "fieldtype": "Table",
+   "label": "Rate Of Minimum Wages",
+   "options": "Minimum Wage Rate"
+  },
+  {
+   "fieldname": "section_break_fxvs",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "wage_register_details",
+   "fieldtype": "Table",
+   "label": "Wage Register Details",
+   "options": "Wages Register Employee Details"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-07-25 16:04:17.386320",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "Wage Register - Form B",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,47 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-28 11:09:46.524193",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "month_year",
+  "no_of_days",
+  "sum_of_basic_and_da"
+ ],
+ "fields": [
+  {
+   "fieldname": "month_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Month Year",
+   "options": "Month Year"
+  },
+  {
+   "fieldname": "no_of_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No Of Days"
+  },
+  {
+   "fieldname": "sum_of_basic_and_da",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Sum Of Basic and DA"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-07-28 11:35:30.157393",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "Employee Salary Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

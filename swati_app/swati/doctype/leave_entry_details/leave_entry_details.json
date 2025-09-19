@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-25 16:09:42.537529",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "amount_of_leave",
+  "date_of_application",
+  "leave_from",
+  "leave_to",
+  "total_leave_availed",
+  "application_status",
+  "column_break_nniu",
+  "date_ihwy",
+  "leave_from_privilege",
+  "leave_to_privilege",
+  "total_leaves_availed_privilege",
+  "balance_at_year_end"
+ ],
+ "fields": [
+  {
+   "fieldname": "amount_of_leave",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount of Leave"
+  },
+  {
+   "fieldname": "date_of_application",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date Of Application (If Any)"
+  },
+  {
+   "fieldname": "leave_to",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Leave To (Casual Leave)"
+  },
+  {
+   "fieldname": "total_leave_availed",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total leave Availed (Casual)"
+  },
+  {
+   "fieldname": "application_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Application Status (Privilege Leave)",
+   "options": "\nGranted Fully\nGranted Partially\nRefused"
+  },
+  {
+   "fieldname": "column_break_nniu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_ihwy",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date Of Application (Privilege Leave)"
+  },
+  {
+   "fieldname": "leave_from_privilege",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Leave From (Privilege)"
+  },
+  {
+   "fieldname": "leave_to_privilege",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Leave to (Privilege)"
+  },
+  {
+   "fieldname": "total_leaves_availed_privilege",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Leaves Availed (Privilege)"
+  },
+  {
+   "fieldname": "balance_at_year_end",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Balance at Year End"
+  },
+  {
+   "fieldname": "leave_from",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Leave From (Casual leave)"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-07-25 16:23:47.849713",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "Leave Entry Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

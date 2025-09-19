@@ -1,0 +1,186 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-25 15:33:35.492896",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "rate_of_wage",
+  "no_of_days_worked",
+  "overtime_hours_worked",
+  "basic",
+  "special_basic",
+  "da",
+  "payments_overtime",
+  "hra",
+  "others",
+  "total",
+  "pf",
+  "esic",
+  "society",
+  "income_tax",
+  "insurance",
+  "other",
+  "recoveries",
+  "totals",
+  "net_payment",
+  "employer_share_pf_welfare_found",
+  "receipt_by_employeebank_transaction_id",
+  "date_of_payment",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name"
+  },
+  {
+   "fieldname": "rate_of_wage",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Rate Of Wage"
+  },
+  {
+   "fieldname": "no_of_days_worked",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "No of Days Worked"
+  },
+  {
+   "fieldname": "overtime_hours_worked",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Overtime Hours Worked"
+  },
+  {
+   "fieldname": "basic",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Basic"
+  },
+  {
+   "fieldname": "special_basic",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Special Basic"
+  },
+  {
+   "fieldname": "da",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "DA"
+  },
+  {
+   "fieldname": "payments_overtime",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Payments Overtime"
+  },
+  {
+   "fieldname": "hra",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "HRA"
+  },
+  {
+   "fieldname": "others",
+   "fieldtype": "Data",
+   "label": "Others"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Total"
+  },
+  {
+   "fieldname": "pf",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PF"
+  },
+  {
+   "fieldname": "esic",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ESIC"
+  },
+  {
+   "fieldname": "society",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Society"
+  },
+  {
+   "fieldname": "income_tax",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Income Tax"
+  },
+  {
+   "fieldname": "insurance",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Insurance"
+  },
+  {
+   "fieldname": "other",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Other"
+  },
+  {
+   "fieldname": "recoveries",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Recoveries"
+  },
+  {
+   "fieldname": "totals",
+   "fieldtype": "Data",
+   "label": "Totals"
+  },
+  {
+   "fieldname": "net_payment",
+   "fieldtype": "Data",
+   "label": "Net Payment"
+  },
+  {
+   "fieldname": "employer_share_pf_welfare_found",
+   "fieldtype": "Data",
+   "label": "Employer Share PF Welfare Found"
+  },
+  {
+   "fieldname": "receipt_by_employeebank_transaction_id",
+   "fieldtype": "Data",
+   "label": "Receipt by Employee/Bank Transaction ID"
+  },
+  {
+   "fieldname": "date_of_payment",
+   "fieldtype": "Date",
+   "label": "Date of Payment"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-07-25 15:43:10.557065",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "Wages Register Employee Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

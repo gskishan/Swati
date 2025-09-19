@@ -1,0 +1,214 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-25 15:50:35.022544",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_code",
+  "name1",
+  "surname",
+  "gender",
+  "father_spouse_name",
+  "category_address",
+  "mobile",
+  "esic_ip",
+  "lwf",
+  "bank_ac_number",
+  "present_address",
+  "servie_book_no",
+  "reason_for_exit",
+  "photo",
+  "remarks",
+  "column_break_axrh",
+  "date_of_birth",
+  "nationality",
+  "education_level",
+  "date_of_joining",
+  "designation",
+  "type_of_employment",
+  "uan",
+  "pan",
+  "aadhaar",
+  "branch_ifsc",
+  "permanent_address",
+  "date_of_exit",
+  "mark_of_identification",
+  "specimen_signaturethumb_impression"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Name",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "surname",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Surname"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "\nMale\nFemale\nOther"
+  },
+  {
+   "fieldname": "father_spouse_name",
+   "fieldtype": "Data",
+   "label": "Father Spouse Name"
+  },
+  {
+   "fieldname": "category_address",
+   "fieldtype": "Select",
+   "label": "Category Address",
+   "options": "\nHS\nS\nSS\nUS"
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "esic_ip",
+   "fieldtype": "Data",
+   "label": "ESIC IP"
+  },
+  {
+   "fieldname": "lwf",
+   "fieldtype": "Data",
+   "label": "LWF"
+  },
+  {
+   "fieldname": "bank_ac_number",
+   "fieldtype": "Data",
+   "label": "Bank A/c Number"
+  },
+  {
+   "fieldname": "present_address",
+   "fieldtype": "Small Text",
+   "label": "Present Address"
+  },
+  {
+   "fieldname": "servie_book_no",
+   "fieldtype": "Data",
+   "label": "Servie Book No"
+  },
+  {
+   "fieldname": "reason_for_exit",
+   "fieldtype": "Data",
+   "label": "Reason for Exit"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach",
+   "label": "Photo"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_axrh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date Of Birth"
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Data",
+   "label": "Nationality"
+  },
+  {
+   "fieldname": "education_level",
+   "fieldtype": "Data",
+   "label": "Education Level"
+  },
+  {
+   "fieldname": "date_of_joining",
+   "fieldtype": "Date",
+   "label": "Date of Joining"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "type_of_employment",
+   "fieldtype": "Select",
+   "label": "Type Of Employment",
+   "options": "\nRegular\nContract"
+  },
+  {
+   "fieldname": "uan",
+   "fieldtype": "Data",
+   "label": "UAN"
+  },
+  {
+   "fieldname": "pan",
+   "fieldtype": "Data",
+   "label": "PAN"
+  },
+  {
+   "fieldname": "aadhaar",
+   "fieldtype": "Data",
+   "label": "AADHAAR"
+  },
+  {
+   "fieldname": "branch_ifsc",
+   "fieldtype": "Data",
+   "label": "Branch IFSC"
+  },
+  {
+   "fieldname": "permanent_address",
+   "fieldtype": "Small Text",
+   "label": "Permanent Address"
+  },
+  {
+   "fieldname": "date_of_exit",
+   "fieldtype": "Date",
+   "label": "Date of Exit"
+  },
+  {
+   "fieldname": "mark_of_identification",
+   "fieldtype": "Data",
+   "label": "Mark of Identification"
+  },
+  {
+   "fieldname": "specimen_signaturethumb_impression",
+   "fieldtype": "Attach",
+   "label": "Specimen Signature/Thumb Impression"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-07-25 16:02:14.222775",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "Employee Register Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:name_of_employee",
+ "creation": "2025-07-25 16:07:56.861409",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_u7h3",
+  "amended_from",
+  "name_of_establishment",
+  "name_of_employee",
+  "column_break_zmwt",
+  "date_of_employment",
+  "section_break_bixc",
+  "leave_entry_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_u7h3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Leave Register",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "name_of_establishment",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name Of Establishment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "name_of_employee",
+   "fieldtype": "Link",
+   "label": "Name Of Employee",
+   "options": "Employee",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_zmwt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_employment",
+   "fieldtype": "Date",
+   "label": "Date Of Employment"
+  },
+  {
+   "fieldname": "section_break_bixc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "leave_entry_details",
+   "fieldtype": "Table",
+   "label": "Leave Entry Details",
+   "options": "Leave Entry Details"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-07-25 16:19:06.934907",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "Leave Register",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

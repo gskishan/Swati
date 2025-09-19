@@ -1,0 +1,109 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:subject",
+ "creation": "2025-07-25 16:27:23.010239",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "category",
+  "employee_filter",
+  "message_type",
+  "subject",
+  "section_break_nmwi",
+  "content",
+  "attachments",
+  "section_break_uzow",
+  "send",
+  "column_break_oxxt",
+  "close"
+ ],
+ "fields": [
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Category",
+   "options": "\nAlert\nNotice"
+  },
+  {
+   "fieldname": "employee_filter",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee Filter",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "message_type",
+   "fieldtype": "Select",
+   "label": "Message Type",
+   "options": "\nMail\nSMS"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "label": "Subject",
+   "unique": 1
+  },
+  {
+   "fieldname": "section_break_nmwi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Note: Please do not change the {EMP_NAME_AND_NUMBER} tag. This tag will be replaced with the employee name and number while sending the mail.",
+   "fieldname": "content",
+   "fieldtype": "Text",
+   "label": "Content"
+  },
+  {
+   "description": "Only PDF, XLS, XLSX, DOC, DOCX, TXT, PPT, PPTX, GIF, JPG, PNG files are accepted",
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "section_break_uzow",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "send",
+   "fieldtype": "Button",
+   "label": "Send"
+  },
+  {
+   "fieldname": "column_break_oxxt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "close",
+   "fieldtype": "Button",
+   "label": "Close"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-25 16:32:35.086869",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "Mass Communication",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

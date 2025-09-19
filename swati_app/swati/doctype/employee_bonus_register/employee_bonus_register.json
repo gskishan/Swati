@@ -1,0 +1,163 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:name1",
+ "creation": "2025-07-28 10:47:56.556297",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_dkxw",
+  "amended_from",
+  "employee_no",
+  "name1",
+  "column_break_ulhq",
+  "uan",
+  "date_of_joining",
+  "section_break_cvhe",
+  "full_basic",
+  "full_vda",
+  "total",
+  "section_break_xrjq",
+  "employee_salary_details",
+  "fixed_days_amount_section",
+  "total_days",
+  "bonus_833",
+  "column_break_pdvf",
+  "total_gross",
+  "bonus_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_dkxw",
+   "fieldtype": "Section Break",
+   "label": "Employee Master"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Bonus Register",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "employee_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Name",
+   "options": "Employee",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_ulhq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "uan",
+   "fieldtype": "Data",
+   "label": "UAN"
+  },
+  {
+   "fieldname": "date_of_joining",
+   "fieldtype": "Date",
+   "label": "Date Of Joining"
+  },
+  {
+   "fieldname": "section_break_cvhe",
+   "fieldtype": "Section Break",
+   "label": "Master Salary"
+  },
+  {
+   "fieldname": "full_basic",
+   "fieldtype": "Currency",
+   "label": "Full Basic"
+  },
+  {
+   "fieldname": "full_vda",
+   "fieldtype": "Currency",
+   "label": "Full VDA"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total"
+  },
+  {
+   "fieldname": "section_break_xrjq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "employee_salary_details",
+   "fieldtype": "Table",
+   "label": "Employee Salary Details",
+   "options": "Employee Salary Details"
+  },
+  {
+   "fieldname": "fixed_days_amount_section",
+   "fieldtype": "Section Break",
+   "label": "Fixed Days Amount"
+  },
+  {
+   "fieldname": "total_days",
+   "fieldtype": "Int",
+   "label": "Total Days"
+  },
+  {
+   "fieldname": "bonus_833",
+   "fieldtype": "Currency",
+   "label": "Bonus @8.33%"
+  },
+  {
+   "fieldname": "column_break_pdvf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_gross",
+   "fieldtype": "Currency",
+   "label": "Total Gross"
+  },
+  {
+   "fieldname": "bonus_amount",
+   "fieldtype": "Currency",
+   "label": "Bonus Amount"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-07-28 11:20:46.073887",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "Employee Bonus Register",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

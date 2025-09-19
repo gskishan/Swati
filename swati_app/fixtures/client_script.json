@@ -152,5 +152,49 @@
   "name": "Budget",
   "script": "frappe.ui.form.on('Budget', {\n    onload: function(frm) {\n        // Filter for Reference Doctype\n        frm.set_query('custom_refrence_doctype', () => {\n            return {\n                filters: {\n                    name: ['in', ['Sales Order', 'Quotation']]\n                }\n            };\n        });\n\n        // Filter for Reference Name (based on selected Reference Doctype and docstatus != 2)\n        frm.set_query('custom_refrence_name', () => {\n            if (!frm.doc.custom_refrence_doctype) {\n                return {};\n            }\n            return {\n                doctype: frm.doc.custom_refrence_doctype,\n                filters: {\n                    docstatus: ['!=', 2]\n                }\n            };\n        });\n    },\n    \n});\n\n\n\nfrappe.ui.form.on('Budget Account', {\n    custom_budget_category: async function(frm, cdt, cdn) {\n        const row = locals[cdt][cdn];\n        const ref_doctype = frm.doc.custom_refrence_doctype;\n        const ref_name = frm.doc.custom_refrence_name;\n        const selected_category = row.custom_budget_category;\n\n        // Ensure required fields are present\n        if (!ref_doctype || !ref_name || !selected_category) {\n            console.warn(\"Missing reference or category\");\n            return;\n        }\n\n        try {\n            // Fetch reference document\n            const doc = await frappe.db.get_doc(ref_doctype, ref_name);\n            console.log(\"Fetched reference document:\", doc);\n\n            let total = 0;\n\n            // Ensure doc has items and is not cancelled\n            if (doc.docstatus !== 2 && Array.isArray(doc.items)) {\n                doc.items.forEach(item => {\n                    if (item.custom_budget_category === selected_category) {\n                        total += item.amount || 0;\n                    }\n                });\n            }\n\n            console.log(\"Calculated Budget Amount:\", total);\n\n            frappe.model.set_value(cdt, cdn, 'budget_amount', total);\n        } catch (err) {\n            console.error(\"Error fetching reference document:\", err);\n            frappe.msgprint(`Failed to fetch data from ${ref_doctype} - ${ref_name}`);\n        }\n    }\n});\n",
   "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Employee Bonus Register",
+  "enabled": 1,
+  "modified": "2025-07-28 11:22:42.544331",
+  "module": "Swati",
+  "name": "Calculate the Sum Of Basic and VDA",
+  "script": "frappe.ui.form.on('Employee Bonus Register', {\n    full_basic(frm) {\n        frm.trigger('calculate_total');\n    },\n    full_vda(frm) {\n        frm.trigger('calculate_total');\n    },\n    calculate_total(frm) {\n        let basic = frm.doc.full_basic || 0;\n        let vda = frm.doc.full_vda || 0;\n        frm.set_value('total', basic + vda);\n    }\n});\n",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Employee Bonus Register",
+  "enabled": 1,
+  "modified": "2025-07-28 11:24:10.492039",
+  "module": "Swati",
+  "name": "Fetching The total Days",
+  "script": "frappe.ui.form.on('Employee Bonus Register', {\n    refresh(frm) {\n        frm.trigger(\"calculate_totals\");\n    },\n    \n    calculate_totals(frm) {\n        let total_days = 0;\n        let total_gross = 0;\n\n        (frm.doc.employee_salary_details || []).forEach(row => {\n            total_days += row.no_of_days || 0;\n            total_gross += row.sum_of_basic_and_da || 0;\n        });\n\n        frm.set_value(\"total_days\", total_days);\n        frm.set_value(\"total_gross\", total_gross);\n\n        // Bonus calculation\n        let bonus_percent = total_gross * 0.0833;\n        let bonus_amount = bonus_percent > 7000 ? 7000 : bonus_percent;\n\n        frm.set_value(\"bonus_833\", flt(bonus_percent, 2));\n        frm.set_value(\"bonus_amount\", flt(bonus_amount, 2));\n    }\n});\n\nfrappe.ui.form.on('Employee Salary Detail', {\n    no_of_days(frm, cdt, cdn) {\n        frm.trigger(\"calculate_totals\");\n    },\n    sum_of_basic_and_da(frm, cdt, cdn) {\n        frm.trigger(\"calculate_totals\");\n    },\n    employee_salary_details_remove(frm) {\n        frm.trigger(\"calculate_totals\");\n    }\n});\n",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Leave Register",
+  "enabled": 1,
+  "modified": "2025-07-28 11:25:31.153347",
+  "module": "Swati",
+  "name": "Total Availed Leaved calculation",
+  "script": "frappe.ui.form.on('Leave Entry Details', {\n    leave_from: function (frm, cdt, cdn) {\n        calculate_total_leaves(frm, cdt, cdn);\n    },\n    leave_to: function (frm, cdt, cdn) {\n        calculate_total_leaves(frm, cdt, cdn);\n    },\n    leave_from_privilege: function (frm, cdt, cdn) {\n        calculate_total_leaves(frm, cdt, cdn);\n    },\n    leave_to_privilege: function (frm, cdt, cdn) {\n        calculate_total_leaves(frm, cdt, cdn);\n    }\n});\n\nfunction calculate_total_leaves(frm, cdt, cdn) {\n    let row = locals[cdt][cdn];\n\n    // Casual or general leave\n    if (row.leave_from && row.leave_to) {\n        let from = frappe.datetime.str_to_obj(row.leave_from);\n        let to = frappe.datetime.str_to_obj(row.leave_to);\n\n        if (from > to) {\n            frappe.msgprint(\"Leave To Date cannot be before Leave From Date\");\n            frappe.model.set_value(cdt, cdn, \"total_leave_availed\", 0);\n        } else {\n            let diff_days = frappe.datetime.get_diff(row.leave_to, row.leave_from) + 1;\n            frappe.model.set_value(cdt, cdn, \"total_leave_availed\", diff_days);\n        }\n    }\n\n    // Privilege leave\n    if (row.leave_from_privilege && row.leave_to_privilege) {\n        let from_priv = frappe.datetime.str_to_obj(row.leave_from_privilege);\n        let to_priv = frappe.datetime.str_to_obj(row.leave_to_privilege);\n\n        if (from_priv > to_priv) {\n            frappe.msgprint(\"Privilege Leave To Date cannot be before From Date\");\n            frappe.model.set_value(cdt, cdn, \"total_leaves_availed_privilege\", 0);\n        } else {\n            let diff_priv = frappe.datetime.get_diff(row.leave_to_privilege, row.leave_from_privilege) + 1;\n            frappe.model.set_value(cdt, cdn, \"total_leaves_availed_privilege\", diff_priv);\n        }\n    }\n}\n",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Sales Invoice",
+  "enabled": 0,
+  "modified": "2025-08-21 19:19:06.722160",
+  "module": "Swati",
+  "name": "Dispatch From and Date Fetching on Sales invoice",
+  "script": "frappe.ui.form.on(\"Sales Invoice\", {\n    before_save: function(frm) {\n        if (frm.doc.items && frm.doc.items.length > 0 && frm.doc.items[0].delivery_note) {\n            frappe.call({\n                method: \"frappe.client.get\",\n                args: {\n                    doctype: \"Delivery Note\",\n                    name: frm.doc.items[0].delivery_note\n                },\n                async: false,   // make it synchronous so values are set before save\n                callback: function(r) {\n                    if (r.message) {\n                        frm.set_value(\"custom_dispatch_from\", r.message.set_warehouse);\n                        frm.set_value(\"custom_dispatch_date\", r.message.posting_date);\n                    }\n                }\n            });\n        }\n    }\n});\n",
+  "view": "Form"
  }
 ]
