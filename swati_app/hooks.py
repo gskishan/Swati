@@ -167,9 +167,12 @@ doc_events = {
 
 	
 	},
- "ToDo": {
-                "validate": "swati_app.custom_script.todo.todo.validate",
- }
+    "ToDo": {
+        "validate": "swati_app.custom_script.todo.todo.validate",
+    },
+    "Sales Invoice": {
+        "autoname": "swati_app.custom_script.sales_invoice.sales_invoice.before_save",
+    }
 }
 fixtures = ["Client Script"]
 # Scheduled Tasks
