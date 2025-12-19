@@ -1,7 +1,5 @@
-import frappe
-from frappe import _
-from frappe.utils import nowdate
+from frappe.utils import today, getdate
 
 def validate(self, method):
-    if self.date and self.date < nowdate():
-        frappe.throw(_("Backdated Date are not allowed. The date must be today or later."))
+    if self.date and self.date < getdate(today()):
+        frappe.throw(_("Backdated dates are not allowed. The date must be today or later."))
