@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:sub_location",
  "creation": "2026-01-23 14:58:48.528271",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -11,16 +12,18 @@
   {
    "fieldname": "sub_location",
    "fieldtype": "Data",
-   "label": "Sub Location"
+   "label": "Sub Location",
+   "unique": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-23 14:59:02.783187",
+ "modified": "2026-01-23 17:13:11.289304",
  "modified_by": "Administrator",
  "module": "Swati",
  "name": "SubLocation",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
