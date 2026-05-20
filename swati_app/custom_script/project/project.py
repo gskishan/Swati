@@ -40,4 +40,13 @@ def update_expected_date(doc, method):
         frappe.db.commit()
 
 
+def set_estimated_costing_from_so(doc, method=None):
+    if not doc.sales_order:
+        return
 
+    custom_total_purchase = frappe.db.get_value(
+        "Sales Order", doc.sales_order, "custom_total_purchase"
+    )
+
+    if custom_total_purchase:
+        doc.estimated_costing = custom_total_purchase

@@ -48,6 +48,10 @@ app_license = "mit"
 #     "Material Request" : "swati/custom_code/material_request/material_request.js"
 	# "Payment Entry" : "swati/custom_code/payment_entry/payment_entry.js",
     # }
+
+doctype_js = {
+    "Quotation" : "swati/custom_code/quotation/quotation.js"
+}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -164,7 +168,7 @@ doc_events = {
 	},
     "Project": {
 		"before_save": "swati_app.custom_script.project.project.update_expected_date",
-
+        "before_insert": "swati_app.custom_script.project.project.set_estimated_costing_from_so"
 	
 	},
     "ToDo": {
