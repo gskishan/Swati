@@ -50,7 +50,8 @@ app_license = "mit"
     # }
 
 doctype_js = {
-    "Quotation" : "swati/custom_code/quotation/quotation.js"
+    "Quotation" : "swati/custom_code/quotation/quotation.js",
+    "Item"  : "custom_script/item/item.js",
 }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
