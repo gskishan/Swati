@@ -214,7 +214,8 @@ scheduler_events = {
 # }
 
 override_whitelisted_methods = {
-	"erpnext.selling.doctype.quotation.quotation.make_sales_order": "swati_app.custom_script.quotation.quotation.make_sales_order"
+	"erpnext.selling.doctype.quotation.quotation.make_sales_order": "swati_app.custom_script.quotation.quotation.make_sales_order",
+	"erpnext.selling.doctype.sales_order.sales_order.make_project": "swati_app.custom_script.sales_order.sales_order.make_project",
 }
 #
 # each overriding function accepts a `data` argument;
