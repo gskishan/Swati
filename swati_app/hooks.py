@@ -212,6 +212,10 @@ scheduler_events = {
 # override_whitelisted_methods = {
 # 	"frappe.desk.doctype.event.event.get_events": "swati_app.event.get_events"
 # }
+
+override_whitelisted_methods = {
+	"erpnext.selling.doctype.quotation.quotation.make_sales_order": "swati_app.custom_script.quotation.quotation.make_sales_order"
+}
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,

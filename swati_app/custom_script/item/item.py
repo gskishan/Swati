@@ -16,4 +16,4 @@ def get_next_item_code(custom_type, custom_category, custom_subcategory):
 		suffix = code[len(prefix):]
 		if suffix.isdigit():
 			max_count = max(max_count, int(suffix))
-	return "{0}{1:03d}".format(prefix, max_count + 1)
+	return "{0}{1:04d}".format(prefix, max_count + 1)
