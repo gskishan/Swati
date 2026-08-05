@@ -52,6 +52,7 @@ app_license = "mit"
 doctype_js = {
     "Quotation" : "swati/custom_code/quotation/quotation.js",
     "Item"  : "custom_script/item/item.js",
+    "Issue"  : "custom_script/issue/issue.js",
 }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -177,6 +178,9 @@ doc_events = {
     },
     "Sales Invoice": {
         "autoname": "swati_app.custom_script.sales_invoice.sales_invoice.before_save",
+    },
+    "Item": {
+        "validate": "swati_app.custom_script.item.item.validate",
     }
 }
 fixtures = ["Client Script"]

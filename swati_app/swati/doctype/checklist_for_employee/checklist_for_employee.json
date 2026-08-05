@@ -1,0 +1,129 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-08-05 11:02:58.027118",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_name",
+  "taep__baep",
+  "start_date",
+  "end_date",
+  "om_training",
+  "safety_training",
+  "column_break_pcoq",
+  "uniform_issue_date",
+  "safety_shoes_issue_date",
+  "avs_ec",
+  "pvc__bgc",
+  "ppe",
+  "adp"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name"
+  },
+  {
+   "columns": 1,
+   "fieldname": "taep__baep",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "TAEP / BAEP",
+   "options": "TAEP\nBAEP"
+  },
+  {
+   "columns": 1,
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date"
+  },
+  {
+   "columns": 1,
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End Date"
+  },
+  {
+   "columns": 1,
+   "fieldname": "om_training",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "O&M Training"
+  },
+  {
+   "columns": 1,
+   "fieldname": "safety_training",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Safety Training"
+  },
+  {
+   "fieldname": "column_break_pcoq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "uniform_issue_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Uniform Issue Date"
+  },
+  {
+   "columns": 1,
+   "fieldname": "safety_shoes_issue_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Safety Shoes Issue Date"
+  },
+  {
+   "columns": 1,
+   "fieldname": "avs_ec",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "AVS EC"
+  },
+  {
+   "columns": 1,
+   "fieldname": "pvc__bgc",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "PVC / BGC"
+  },
+  {
+   "columns": 1,
+   "fieldname": "ppe",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "PPE"
+  },
+  {
+   "columns": 1,
+   "fieldname": "adp",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "ADP"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-05 11:16:56.683337",
+ "modified_by": "Administrator",
+ "module": "Swati",
+ "name": "Checklist for Employee",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
